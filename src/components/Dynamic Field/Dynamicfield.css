@@ -80,9 +80,9 @@ flex-grow: 0;
 .delete {
   position: relative;
   color: #05367a;
-  margin-left: 70%;
-  scale: 120%;
-  top: -5px;
+  top: -65px;
+  left: 160px;
+  scale: 150%;
 }
 .divider {
   position: relative;
