@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import { DropdownButton } from "./DropDownButton";
 function DropdownMenu(props) {
   const [display, setDisplay] = useState("block");
 
@@ -12,6 +13,10 @@ function DropdownMenu(props) {
   }
   return (
     <div>
+      <h class="field-header" onClick={handleClick} >Dynamic Field</h>
+      
+      <br />
+            <hr class="divider" />
       <div style={{ display: display }}>
         {props.children}
         </div>

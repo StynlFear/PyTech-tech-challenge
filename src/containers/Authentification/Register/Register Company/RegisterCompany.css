@@ -146,20 +146,3 @@
     .btn-1:hover {
      box-shadow: 5px 5px 10px #121344;
     }
-    .background{
-    
-      background-image: url("/src/assets/background_login_signup.svg");
-    
-      /* Full height */
-      height: 100%;
-    
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    @font-face {
-      font-family: 'Roboto';
-      src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    }
-    

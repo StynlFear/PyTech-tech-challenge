@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import { Dropdown, Option } from "../DropDown/DropDown.jsx";
 import { DropdownMenu } from "../DropDownMenu/DropDownMenu.jsx";
+import { DropdownButton } from "../DropDownMenu/DropDownButton.jsx";
 // CSS IMPORT
 import "./DynamicField.css";
 import "../../containers/Create Form/CreateForm.css";
@@ -28,6 +29,7 @@ export const Field = () => {
   };
 
   let removeFormFields = (i) => {
+    event.preventDefault();
     let newFormValues = [...formValues];
     newFormValues.splice(i, 1);
     setFormValues(newFormValues);
@@ -37,22 +39,18 @@ export const Field = () => {
     event.preventDefault();
     console.log(formValues);
   };
-  
   return (
     <div>
       <form onSubmit={handleSubmit}>
         {formValues.map((element, index) => (
           <div className="form-inline" key={index}>
-            <h class="field-header"  >Dynamic Field</h>
+            <DropdownMenu>
             {index ? (
               <i
                 class="fa fa-trash delete"
                 onClick={() => removeFormFields(index)}
               />
             ) : null}
-            <br />
-            <hr class="divider" />
-            <DropdownMenu>
             <label class="field-txt">Dynamic Field Name </label>
             <br />
             <input
@@ -91,9 +89,10 @@ export const Field = () => {
               onChange={handleSelect}
             >
               <Option selected value="Click to see options" />
-              <Option value="Option 1" />
-              <Option value="Option 2" />
-              <Option value="Option 3" />
+              <Option value="Single Choice" />
+              <Option value="Multiple Choices" />
+              <Option value="Text" />
+              <Option value="Data" />
             </Dropdown>
             <label class="field-txt">Options</label>
             <div>O sa fie Meniul optiuni</div>
