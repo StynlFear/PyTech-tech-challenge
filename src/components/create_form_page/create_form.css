@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  }
+
+    body{
+    background-color: rgba(219,235,255,255);
+    }
+.add_form{
+position: absolute;
+width: 163.48px;
+height: 175px;
+left: 200px;
+top: 100px;
+
+background: #C1DBFF;
+border: 2px solid #05367A;
+border-radius: 20px;
+}
+.title_create_form
+{
+    color: #05367A;
+position: absolute;
+width: 203px;
+height: 56px;
+left: 203px;
+top: 35px;
+
+font-family: "Roboto";
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 56px;
+/* identical to box height, or 175% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+}
+.text_under_create_form{
+    position: absolute;
+width: 136px;
+height: 50px;
+left: 214px;
+top: 286px;
+
+/* Heading/H5 */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 21px;
+line-height: 32px;
+/* or 133% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #577298;
+
+}
+.plus_create_form {
+    font-size:50px;
+    color: rgba(5,54,122,255);
+    font-weight: bolder;
+  }
+.remaning{
+    box-sizing: border-box;
+
+position: absolute;
+width: 341px;
+height: 80px;
+left: 1500px;
+top: 800px;
+
+background: #FAB8B8;
+border: 1px solid #FF0000;
+border-radius: 20px;
+color: #730000;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+}

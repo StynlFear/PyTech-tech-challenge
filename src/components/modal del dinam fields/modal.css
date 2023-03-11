@@ -1,0 +1,203 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    
+ 
+    line-height: 1.4;
+    top:35%;
+    left: 45%;
+    background: rgba(255,218,218,255);
+    padding: 14px 28px;
+    border-radius: 15px;
+    width: 670px;
+    height: 644px;
+    scale: 70%;
+  
+}
+
+.close-modal {
+    position: absolute;
+    background-color: #fff;
+    top: 10px;
+    width: 200px;
+    border-radius: 15px;
+    height: 46px;
+    right: 10px;
+    color: #3C5681;
+    padding: 5px 7px;
+    left: 150px;
+    top: 500px;
+}       
+.message1{
+position: absolute;
+width: 308px;
+height: 40px;
+left: 205px;
+top: 350px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+/* identical to box height, or 125% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #720000;
+
+}
+.delete-dynamic-field{
+
+    position: absolute;
+    background-color: #D30000;
+    top: 10px;
+    width: 200px;
+    border-radius: 15px;
+    height: 46px;
+    right: 10px;
+    color: #fff;
+    padding: 5px 7px;
+    left: 390px;
+    top: 500px;
+}
+.message2{
+position: absolute;
+width: 362px;
+height: 62.53px;
+left: 175px;
+top: 400px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 40px;
+/* or 167% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #9D5151;
+}
+.message1_delop{
+    position: absolute;
+width: 308px;
+height: 40px;
+left: 255px;
+top: 350px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+/* identical to box height, or 125% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #720000;
+
+}
+.at-t1{
+    position: absolute;
+width: 308px;
+height: 40px;
+left: 270px;
+top: 400px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+/* identical to box height, or 125% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #720000;
+
+}
+
+.at-t2 {
+    position: absolute;
+    width: 362px;
+    height: 62.53px;
+    left: 165px;
+    top: 450px;
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: normal; /* or line-height: 1.2; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #9D5151;
+  }
+  
+  .close-modal-a {
+    position: absolute;
+    background-color: #fff;
+    top: 60px;
+    width: 200px;
+    border-radius: 15px;
+    height: 46px;
+    right: 10px;
+    color: #3C5681;
+    padding: 5px 7px;
+    left: 130px;
+    top: 550px;
+}   
+.delete-dynamic-field-a{
+
+    position: absolute;
+    background-color: #D30000;
+   
+    width: 200px;
+    border-radius: 15px;
+    height: 46px;
+    right: 10px;
+    color: #fff;
+    padding: 5px 7px;
+    left: 375px;
+    top: 550px;
+}
+.img-a{
+    position: absolute;
+    left: 200px;
+}
