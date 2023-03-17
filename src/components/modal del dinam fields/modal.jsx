@@ -23,7 +23,7 @@ export default function Deldyn() {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content">
+          <div className="modal-content1">
             <img  src="./src/images/popup.png" alt="idk" width="400px" />
             <div className="message1">Delete dynamic field?</div>
             <div className="message2">You’ll permanently lose your field  "name of field" from your list. </div>

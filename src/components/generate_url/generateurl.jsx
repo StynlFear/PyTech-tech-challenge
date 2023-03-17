@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Deloppop() {
+export default function Generateurl() {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -22,12 +22,12 @@ export default function Deloppop() {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content1  ">
-            <img  src="./src/images/popup.png" alt="idk" width="400px" />
-            <div className="message1_delop">Delete option?</div>
-            <div className="message2">You’ll permanently lose your option "name of field" from your list. </div>
-            <button className="close-modal" onClick={toggleModal}>Cancel</button>
-            <button className="delete-dynamic-field">Delete field</button>
+          <div className="modal-content-generate">
+            <img  src="./src/images/generate.png" alt="idk" width="400px" />
+           
+            <div className="generate-m">You want to generate a URL for this form? </div>
+            <button className="close-modal-g" onClick={toggleModal}>Cancel</button>
+            <button className="generate-url-b">Generate</button>
           </div>
         </div>
       )}

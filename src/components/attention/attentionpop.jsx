@@ -22,7 +22,7 @@ export default function Attention() {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content">
+          <div className="modal-content1">
             <img className="img-a" src="./src/images/Attention.png" alt="idk" width="400px" />
             <div className="at-t1">Attention!</div>
             <div className="at-t2">Once this form is deleted,  all submissions stored for this form will also be deleted.Are you sure you want to delete this form? </div>

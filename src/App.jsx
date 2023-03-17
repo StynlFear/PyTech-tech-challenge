@@ -14,7 +14,9 @@ import Deldyn from "./components/modal del dinam fields/modal.jsx";
 import Delsecpop from "./components/delete_section/delsecpop.jsx";
 import Delformpop from "./components/delete_form_pop/delformpop.jsx";
 import Attention from "./components/attention/attentionpop.jsx";
-
+import Generateurl from "./components/generate_url/generateurl.jsx";
+import { Pageuser } from "./components/page user/pageuser.jsx";
+import { Startup } from "./components/start up/startup.jsx";
 function App() {
   return (
     <div className="App">
@@ -28,9 +30,8 @@ function App() {
           <Route path="Type" element={<PageType/>} />
           <Route path="Forgot" element={<Forgotpassword/>} />
           <Route path="Reset" element={<ResetPassword/>} />
-          <Route path="/" element={<Formpage/>} />
-          <Route path="/test" element={<Delformpop/>} />
-
+          <Route path="/test" element={<Startup/>} />
+          <Route path="/" element={<Pageuser/>} />
         </Routes>
       </BrowserRouter>
     </div>
