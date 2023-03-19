@@ -19,7 +19,7 @@ width: 702px;
 height: 42px;
 
 background: #EFF6FF;
-/* Blue 3 */
+/* Blue 3 */ 
 
 border: 1px solid #8595B0;
 border-radius: 8px;

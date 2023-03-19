@@ -8,10 +8,12 @@ import { Forgotpassword } from "./containers/Authentification/Forgot password/fo
 import { ResetPassword } from "./containers/Authentification/Reset password/resetpassword.jsx";
 import CForm from "./containers/Create Form/CreateForm.jsx";
 import { Popup } from "./components/Popup/Popup.jsx";
+import { Editor } from '@tinymce/tinymce-react';
 import "./App.css";
 function App() {
   return (
     <div className="App">
+      
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={< CForm/>} />

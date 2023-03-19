@@ -1,24 +1,26 @@
+import { useState } from "react";
 import React from "react";
-function DropdownButton( props ) {
+ function DropdownMenuSec(props) {
+  const [display, setDisplay] = useState("block");
 
-    var content = props.content;
-
-    var handleClick = props.onClick;
-
-    return (
-
-        <div>
-
-            <div>
-
-            <h class="field-header" >Dynamic Field</h>
-
-            </div>
-
+  function handleClick() {
+    if (display == "none") {
+      setDisplay("block");
+    } else {
+      setDisplay("none");
+    }
+  }
+  return (
+    <div>
+      <h class="field-header" onClick={handleClick} >Section</h>
+      
+      <br />
+            <hr class="divider" />
+      <div style={{ display: display }}>
+        {props.children}
         </div>
-
-    )
-
+    </div>
+  );
 }
 
-export { DropdownButton }
+export { DropdownMenuSec };
