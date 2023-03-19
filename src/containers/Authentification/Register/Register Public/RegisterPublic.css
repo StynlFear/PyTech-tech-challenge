@@ -1,12 +1,4 @@
-body {
-    background-image: url("/src/assets/background_login_signup.svg");
-    
-      /* Full height */
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-}
+
 .fm-lb{
     position: absolute;
     left: 10px;

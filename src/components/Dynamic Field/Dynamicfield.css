@@ -3,7 +3,7 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 }
 .section-header {
-  width: 49px;
+  width: 100px;
   height: 28px;
 
   font-family: "Roboto";
@@ -12,7 +12,7 @@
   font-size: 24px;
   line-height: 28px;
   color: #05367a;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   position: absolute;
   left: 193px;
 }
@@ -67,7 +67,6 @@ flex-grow: 0;
 .field-header {
   width: 172px;
   height: 32px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
@@ -81,17 +80,8 @@ flex-grow: 0;
   position: relative;
   color: #05367a;
   top: -65px;
-  left: 160px;
+  left: 670px;
   scale: 150%;
-}
-.divider {
-  position: relative;
-  width: 701px;
-  height: 0px;
-  left: 0px;
-  top: -10px;
-
-  border: 1px solid #05367a;
 }
 input,
 select,

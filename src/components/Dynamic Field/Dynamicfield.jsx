@@ -2,9 +2,8 @@ import { useState } from "react";
 import React from "react";
 import { Dropdown, Option } from "../DropDown/DropDown.jsx";
 import { DropdownMenu } from "../DropDownMenu/DropDownMenu.jsx";
-import { DropdownButton } from "../DropDownMenu/DropDownButton.jsx";
+import { Options } from "../Options/Options.jsx";
 // CSS IMPORT
-import "./DynamicField.css";
 import "../../containers/Create Form/CreateForm.css";
 export const Field = () => {
   const [formValues, setFormValues] = useState([
@@ -92,10 +91,10 @@ export const Field = () => {
               <Option value="Single Choice" />
               <Option value="Multiple Choices" />
               <Option value="Text" />
-              <Option value="Data" />
+              <Option value="Date" />
             </Dropdown>
             <label class="field-txt">Options</label>
-            <div>O sa fie Meniul optiuni</div>
+            <Options/>
             <label class="field-txt">Document Keywords</label>
             <br />
             <input type="text" class=" field--keyword"></input>
@@ -109,9 +108,6 @@ export const Field = () => {
           </button>
           <button id="btn" class="create-import">
             Import Field
-          </button>
-          <button className="button submit" type="submit">
-            Submit
           </button>
         </div>
       </form>
