@@ -227,14 +227,14 @@ flex-grow: 1;
     align-self: stretch;
     flex-grow: 0;
     position: absolute;
-    top: 420px;
-    left: 530px;
+    top: 520px;
+    left: 730px;
  }
 .log-remb
 {
     position: absolute;
-    left:570px;
-    top:420px;
+    left:760px;
+    top:520px;
     width: 105px;
    height: 24px;
 
@@ -250,7 +250,7 @@ word-spacing: -1px;
 /* identical to box height, or 150% */
 
 
-color: #FFFFFF;
+color: #fff;
 
 
 /* Inside auto layout */
@@ -259,10 +259,10 @@ flex: none;
 order: 0;
 flex-grow: 0;
 }
-.log-forgot
+.log-forgot1
 {
 position: absolute;
-top: 543px;
+top: 520px;
 left: 1060px;
 
 /* Body/Regular Large */
@@ -277,7 +277,7 @@ line-height: 24px;
 display: flex;
 align-items: center;
 
-color: #FFFFFF;
+color: #fff;
 }
 
   .log-btn{
@@ -291,20 +291,20 @@ color: #FFFFFF;
      position:absolute;
      width: 260px;
      height: 60px;
-     left: 630px;
-     top: 520px;
+     left: 825px;
+     top: 620px;
     color: white;
     font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
      background: #005cdd;
      border-radius: 20px;
    }
 .log--dntacc{
     position: absolute;
-    top:650px;
-    left:630px;
+    top:740px;
+    left:845px;
     width: 165px;
 height: 24px;
 
@@ -332,8 +332,8 @@ flex-grow: 0;
 .log-sign
 {   
 position: absolute;
-top:635px;
-left:810px;
+top: 742px;
+left:1020px;
 font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 400;

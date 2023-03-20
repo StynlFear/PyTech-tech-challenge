@@ -4,7 +4,7 @@
 
     width: 1016px;
     height: 764px;
-    left: 300px;
+    left: 440px;
     top: 60px;
    
     background: linear-gradient(
@@ -14,7 +14,7 @@
     );
     border-radius: 30px;
   }
-  .t1 {
+  .t1-ca {
     position: relative;
     width: 471px;
     height: 40px;
@@ -29,12 +29,12 @@
   
     color: #ffffff;
   }
-  .t2 {
+  .t2-ca {
     position: relative;
     width: 471px;
     height: 24px;
     left: 35px;
-    top:-30px;
+    top:-0px;
   
     /* Body/Bold Large */
   
@@ -47,12 +47,12 @@
   
     color: #cecece;
   }
-  .t3 {
+  .t3-ca {
     position: relative;
     width: 471px;
     height: 32px;
     left: 260px;
-    top: -50px;
+    top: 30px;
   
     /* Heading/H4 */
   
@@ -108,7 +108,7 @@
     order: 0;
     flex-grow: 0;
   }
-  .t5 {
+  .t5-ca {
     width: 56px;
     height: 24px;
   
@@ -131,7 +131,7 @@
     order: 1;
     flex-grow: 0;
     position: absolute;
-    top: 20px;
+    top: 0px;
     left: 10px;
   }
   .tx-2 {
