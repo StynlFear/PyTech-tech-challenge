@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .create-form-container {
     display: flex;
     justify-content: center;
@@ -8,6 +9,22 @@
     background-repeat: no-repeat;
     background-size: auto;
   }
+=======
+.create-form-container{
+    width: 100vw;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    background: #DBEBFF;
+    left: 20px;
+    /* Full height */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+}
+>>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
 .button-submit {
     display: flex;
 flex-direction: row;
@@ -25,13 +42,20 @@ background: #0377FF;
 border-radius: 10px;
 margin-bottom: 100px;
 margin-top: 40px;
+<<<<<<< HEAD
 margin-left: 250px;
+=======
+>>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
 }
 .create-header {
     position: relative;
     width: 203px;
     height: 56px;
+<<<<<<< HEAD
     left: -50px;
+=======
+    left: -410px;
+>>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
     top: 35px;
     margin-bottom: 40px;
     margin-top: 30px;
@@ -62,7 +86,10 @@ height: 48px;
 color: white;
 background: #00336F;
 border-radius: 10px;
+<<<<<<< HEAD
 margin-left: 230px;
+=======
+>>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
 }
 .create-import {
     box-sizing: border-box;
@@ -88,7 +115,11 @@ margin-left: 20px;
     position: relative;
     width: 980px;
     height: 0px;
+<<<<<<< HEAD
     left: -50px;
+=======
+    left: -280px;
+>>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
     top: 0px;
   
     border: 1px solid #05367a;
@@ -97,6 +128,7 @@ margin-left: 20px;
     position: relative;
     width: 700px;
     height: 0px;
+<<<<<<< HEAD
     left: 230px;
     top: -10px;
   
@@ -111,3 +143,10 @@ margin-left: 20px;
 .move-trash-cf-field{
     margin-left: -10px;
 }
+=======
+    left: 0px;
+    top: -10px;
+  
+    border: 1px solid #05367a;
+  }
+>>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
