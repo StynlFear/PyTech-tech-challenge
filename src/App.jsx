@@ -14,15 +14,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={< CForm/>} />
+          <Route exact path="/" element={<CForm />} />
           <Route path="Login" element={<LoginPage />} />
-          <Route path="RegisterInd" element={<RegisterIndPage/>} />
-          <Route path="RegisterComp" element={<RegisterCompPage/>} />
-          <Route path="RegisterPub" element={<RegisterPubPage/>} />
-          <Route path="Type" element={<PageType/>} />
-          <Route path="Forgot" element={<Forgotpassword/>} />
-          <Route path="Reset" element={<ResetPassword/>} />
-          <Route path="/test" element={<Startup/>} />
+          <Route path="RegisterInd" element={<RegisterIndPage />} />
+          <Route path="RegisterComp" element={<RegisterCompPage />} />
+          <Route path="RegisterPub" element={<RegisterPubPage />} />
+          <Route path="Type" element={<PageType />} />
+          <Route path="Forgot" element={<Forgotpassword />} />
+          <Route path="Reset" element={<ResetPassword />} />
+          <Route path="/test" element={<Startup />} />
         </Routes>
       </BrowserRouter>
     </div>
