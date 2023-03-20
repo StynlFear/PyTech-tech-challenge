@@ -101,7 +101,10 @@ input:focus {
   left: 90px;
   bottom: 20px;
 }
-
+.inp-mand-cf{
+  position: absolute;
+  top: 1500px;
+}
 .field--keyword {
   box-sizing: border-box;
 
