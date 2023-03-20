@@ -35,7 +35,7 @@ export const RegisterCompPage = () => {
     <div className="background">
       <div className="fm-bg">
         <div class="txt-1">
-          <p class="t1">Sign up as a Company</p>
+          <p class="t1-rcomp">Sign up as a Company</p>
           <p class="t2-rcomp">Please sign in to your registered account</p>
         </div>
         <form className="fm">

@@ -104,11 +104,11 @@
     top: 100px;
     
     }
-    .t1 {
+    .t1-rcomp {
      position: absolute;
      width: 471px;
      height: 40px;
-     left: 0px;
+     left: 32px;
      top: 0px;
      text-align: left;
      font-family: "Roboto";
