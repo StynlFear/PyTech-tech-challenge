@@ -8,7 +8,7 @@ export const RegisterIndPage = () => {
     <div>
      <div className="fm-bg">
      <div class="txt-1">
-        <p class="t1">Sign up as an Individual</p>
+        <p class="t1-su">Sign up as an Individual</p>
         <p class="t2-rind">Please sign in to your registered account</p>
       </div>
       <form className="fm">
