@@ -4,11 +4,7 @@ export function SectionEditor( props ) {
 
     return (
 
-<<<<<<< HEAD
-        <div className="move-input-cf">
-=======
         <div>
->>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
 
 <Editor
         apiKey='8kthf9jvq1qz19jgizp0f91gaed5vr923mna2s5yxnnkknc0'
