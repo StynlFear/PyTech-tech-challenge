@@ -145,9 +145,7 @@
     
     .btn-1:hover {
      box-shadow: 5px 5px 10px #121344;
-<<<<<<< HEAD
     }
-<<<<<<< HEAD
 .btn-t-rcomp{
   font-style: normal;
       font-weight: 700;
@@ -155,50 +153,3 @@
       line-height: 24px;
       color: #fff;
 }
-=======
-    .background{
-    
-      background-image: url("/src/assets/background_login_signup.svg");
-    
-      /* Full height */
-      height: 100%;
-    
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    @font-face {
-      font-family: 'Roboto';
-      src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    }
-    h1 {
-            width: 300px;
-            height: 24px;
-           scale:120%;
-            /* UI Element/Button */
-           position: absolute;
-           left: -20px;
-            font-family: "Roboto";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 24px;
-            /* identical to box height, or 133% */
-           
-            align-items: center;
-            text-align: center;
-           
-            /* Wireframes/White */
-           
-            color: #ffffff;
-           
-            /* Inside auto layout */
-           
-            flex: none;
-            order: 0;
-            flex-grow: 1;
-=======
->>>>>>> 6039505081a91e647b15261a73d6183ce04f4cc9
-    }
->>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283

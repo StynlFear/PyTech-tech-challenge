@@ -49,28 +49,17 @@ export const Sections = () => {
                   onClick={() => removeFormFields(index)}
                 />
               ) : null}
-<<<<<<< HEAD
-              <label class="field-txt move-input-cf">Section Title</label>
-              <br />
-              <input
-                class="field-input move-input-cf"
-=======
               <label class="field-txt">Section Title</label>
               <br />
               <input
                 class="field-input"
->>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
                 type="text"
                 name="TitleSection"
                 value={element.TitleSection || ""}
                 onChange={(e) => handleChange(index, e)}
               />
               <br />
-<<<<<<< HEAD
-              <label class="field-txt move-input-cf">Content</label>
-=======
               <label class="field-txt">Content</label>
->>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
               <br />
               <label></label>
               <SectionEditor
@@ -78,11 +67,7 @@ export const Sections = () => {
                 onEditorChange={(e) => handleChange(index, e)}
               />
               <br />
-<<<<<<< HEAD
-              <label class="field-txt move-input-cf">Choose Document Type</label>
-=======
               <label class="field-txt">Choose Document Type</label>
->>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
               <Dropdown
               action=""
               onChange={handleSelect}

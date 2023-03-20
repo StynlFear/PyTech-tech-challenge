@@ -40,11 +40,7 @@ export const Data = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-<<<<<<< HEAD
-              <label class="field-txt move-input-cf">Choose Document Type</label>
-=======
               <label class="field-txt">Choose Document Type</label>
->>>>>>> 42e5246eb4f9dc409f6a58974d20dc084f077283
               <Dropdown
               action=""
               onChange={handleSelect}
