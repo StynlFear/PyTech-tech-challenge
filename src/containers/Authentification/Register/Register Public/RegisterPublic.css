@@ -1,4 +1,16 @@
+<<<<<<< HEAD
+body {
+    background-image: url("/src/assets/background_login_signup.svg");
+    
+      /* Full height */
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+=======
 
+>>>>>>> 6039505081a91e647b15261a73d6183ce04f4cc9
 .fm-lb{
     position: absolute;
     left: 10px;
@@ -164,7 +176,37 @@
      order: 0;
      flex-grow: 1;
     }
+<<<<<<< HEAD
+    h1 {
+        width: 300px;
+        height: 24px;
+       scale:120%;
+        /* UI Element/Button */
+       position: absolute;
+       left: -20px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        /* identical to box height, or 133% */
+       
+        align-items: center;
+        text-align: center;
+       
+        /* Wireframes/White */
+       
+        color: #ffffff;
+       
+        /* Inside auto layout */
+       
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+}
+=======
    
+>>>>>>> 6039505081a91e647b15261a73d6183ce04f4cc9
     .txt-1{
         position: absolute;
         top: 10px;
