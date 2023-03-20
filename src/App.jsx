@@ -17,12 +17,6 @@ import Attention from "./components/attention/attentionpop.jsx";
 import Generateurl from "./components/generate_url/generateurl.jsx";
 import { Pageuser } from "./components/page user/pageuser.jsx";
 import { Startup } from "./components/start up/startup.jsx";
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/123" element={< PageType/>} />
 import CForm from "./containers/Create Form/CreateForm.jsx";
 import { Popup } from "./components/Popup/Popup.jsx";
 import { Editor } from '@tinymce/tinymce-react';
