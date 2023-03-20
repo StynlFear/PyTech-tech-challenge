@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<CForm />} />
+          <Route exact path="/" element={<RegisterCompPage />} />
           <Route path="Login" element={<LoginPage />} />
           <Route path="RegisterInd" element={<RegisterIndPage />} />
           <Route path="RegisterComp" element={<RegisterCompPage />} />
