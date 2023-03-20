@@ -18,7 +18,8 @@ export const Startup = () => {
         <button className="sp-sign">Sign Up</button>
         <hr className="sp-bar" />
         </div>
-        <section>
+       
+        <section >
             <div className="sp-title1">Welcome to Intelligent Forms</div>
 
             <FontAwesomeIcon icon={faCheckCircle}  color="#002372" size="1x" className="sp-check1"/>
@@ -135,6 +136,7 @@ export const Startup = () => {
             <button className="up-girl-btn">Sign Up for free</button>
        </section>
     </div>
+
     
   );
 };

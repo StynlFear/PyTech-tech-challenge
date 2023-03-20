@@ -8,12 +8,13 @@ import { Router } from "react-router-dom";
 export const LoginPage = () => {
   return (
     <div>
+     
       <div class="log">
         <div class="log-tit">
-            <h3>Log in</h3> 
+            <h1 className="login-title-txt1">Log in</h1> 
         </div>
         <div className="log-txt">
-            <p>Enter your account details below.</p>
+            <p className="login-txt1">Enter your account details below.</p>
         </div>
       <form className="log-form">
         {LoginFormData &&
@@ -28,7 +29,7 @@ export const LoginPage = () => {
       </form>
       </div>
       <div>
-      <span className="log-check"><input type="checkbox"></input></span> 
+       <input type="checkbox"></input>
         <div className="log-remb">Remember me</div>
         <router>
       <Link to="/Forgot"><p class="log-forgot">Forgot password?</p></Link>

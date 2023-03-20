@@ -1,6 +1,6 @@
-.fm-lb{
+.fm-lb-rpub{
     position: absolute;
-    left: 10px;
+    left: 0px;
     margin-top:10px ;
      font-family: "Roboto";
      font-style: normal;
@@ -116,11 +116,11 @@
     
      color: #ffffff;
     }
-    .t2 {
+    .t2-rpub {
      position: absolute;
      width: 471px;
      height: 24px;
-     left: -65px;
+     left: -51px;
      top: 60px;
     
      /* Body/Bold Large */
@@ -182,4 +182,12 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    .btn-t-rpub{
+
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
     }
