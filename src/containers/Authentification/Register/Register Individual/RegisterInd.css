@@ -1,6 +1,6 @@
-.fm-lb{
+.fm-lb-rind{
 position: absolute;
-left: 10px;
+left: 0px;
 margin-top:10px ;
  font-family: "Roboto";
  font-style: normal;
@@ -41,7 +41,7 @@ color: black;
 .fm-bg{
 
   background-color: rgba(23,73,141,0.9);
-  width: 555px;
+  width: 1016px;
   height: 764px;
   border-radius: 30px;
   display: flex;
@@ -52,8 +52,18 @@ color: black;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
+  width: 1016px;
+
 
   
+}
+.text-btn1
+{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
 }
 .btn-1{
  display: flex;
@@ -68,7 +78,7 @@ color: black;
   height: 60px;
   left: 100px;
   top: 480px;
-
+ 
   background: #005cdd;
   border-radius: 20px;
 }
@@ -89,33 +99,7 @@ color: black;
    background: #005cdd;
    border-radius: 20px;
  }
- h1 {
-  width: 300px;
-  height: 24px;
- scale:120%;
-  /* UI Element/Button */
- position: absolute;
- left: -20px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  /* identical to box height, or 133% */
  
-  align-items: center;
-  text-align: center;
- 
-  /* Wireframes/White */
- 
-  color: #ffffff;
- 
-  /* Inside auto layout */
- 
-  flex: none;
-  order: 0;
-  flex-grow: 1;
-}
  .txt-1{
   position: absolute;
   top: 10px;
@@ -147,11 +131,11 @@ top: 140px;
 
  color: #ffffff;
 }
-.t2 {
+.t2-rind {
  position: absolute;
  width: 471px;
  height: 24px;
- left: -65px;
+ left: -50px;
  top: 60px;
 
  /* Body/Bold Large */

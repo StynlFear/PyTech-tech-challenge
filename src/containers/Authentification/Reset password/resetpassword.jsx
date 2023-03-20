@@ -9,10 +9,10 @@ export const ResetPassword = () => {
         
         <div class="reset">
         <div class="reset-h3">
-            <h3>Reset password</h3>
+            <h3 className="rp-title-cont">Reset password</h3>
         </div>
         <div class="reset-p">
-            <p>Create a new password for your account.</p>
+            <p className="rp-textcr">Create a new password for your account.</p>
         </div>
     <form action="" class="reset-form">
         <div class="reset-form--label-pass">Password</div>
@@ -21,7 +21,7 @@ export const ResetPassword = () => {
         </div>
         <div class="reset-form--label-confirm">Confirm password</div>
         <div class="reset-form--input-confirm"><input type="password" name="" id="" placeholder="Confirm Password"></input>   </div>   
-        <button class="reset-btn">Confirm password</button>    
+        <button class="reset-btn"><div className="txt-btn-rp">Confirm password</div></button>    
     </form>
     </div>
     </div>

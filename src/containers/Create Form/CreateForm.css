@@ -1,0 +1,113 @@
+.create-form-container {
+    display: flex;
+    justify-content: center;
+    background-color: #DBEBFF;
+    /* Full height */
+    /* Center and scale the image nicely */
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+.button-submit {
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 27px 32px;
+gap: 10px;
+
+position: relative;
+width: 162px;
+height: 48px;
+left: 500px;
+color: white;
+background: #0377FF;
+border-radius: 10px;
+margin-bottom: 100px;
+margin-top: 40px;
+margin-left: 250px;
+}
+.create-header {
+    position: relative;
+    width: 203px;
+    height: 56px;
+    left: -50px;
+    top: 35px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 56px;
+    /* identical to box height, or 175% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #05367A;
+    
+}
+.create-btn{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 27px 32px;
+gap: 10px;
+text-align: center;
+width: 196px;
+height: 48px;
+color: white;
+background: #00336F;
+border-radius: 10px;
+margin-left: 230px;
+}
+.create-import {
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 27px 32px;
+gap: 10px;
+color: #3C5681;
+width: 182px;
+height: 48px;
+
+background: #E6EAFC;
+border: 2px solid #3C5681;
+border-radius: 10px;
+margin-left: 20px;
+}
+.section-divider{
+    position: relative;
+    width: 980px;
+    height: 0px;
+    left: -50px;
+    top: 0px;
+  
+    border: 1px solid #05367a;
+}
+.divider {
+    position: relative;
+    width: 700px;
+    height: 0px;
+    left: 230px;
+    top: -10px;
+  
+    border: 1px solid #05367a;
+  }
+.move-input-cf{
+    margin-left: 230px;
+}
+.move-trash-cf{
+    margin-left: 150px;
+}
+.move-trash-cf-field{
+    margin-left: -10px;
+}

@@ -4,7 +4,6 @@ import App from './App'
 import './index.css'
 import "./App.css";
 import "./components/modal del dinam fields/modal.css"
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

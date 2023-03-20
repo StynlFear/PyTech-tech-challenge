@@ -20,16 +20,19 @@ export const PageType = () => {
         <div class="bx-1">
         <router>
           <Link to="/RegisterComp"> <img src={SignComp}  class="img-1" /></Link>
+          <div className="company-t">Company</div>
           </router>
         </div>
         <div class="bx-1">
         <router>
           <Link to="/RegisterPub"> <img src={SignPub}  class="img-3" /></Link>
+          <div className="pub-t">Public institution</div>
           </router>
         </div>
         <div class="bx-1">
         <router>
           <Link to="/RegisterInd"> <img src={SignInd}  class="img-2" /></Link>
+          <div className="individual-t">Individual</div>
           </router>
         </div>
         <div class="tx-2">

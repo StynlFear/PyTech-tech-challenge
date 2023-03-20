@@ -1,6 +1,6 @@
-.fm-lb{
+.fm-lb-rcomp{
     position: absolute;
-    left: 10px;
+    left: 0px;
     margin-top:10px ;
      font-family: "Roboto";
      font-style: normal;
@@ -120,11 +120,11 @@
     
      color: #ffffff;
     }
-    .t2 {
+    .t2-rcomp {
      position: absolute;
      width: 471px;
      height: 24px;
-     left: -65px;
+     left: -51px;
      top: 60px;
     
      /* Body/Bold Large */
@@ -146,46 +146,10 @@
     .btn-1:hover {
      box-shadow: 5px 5px 10px #121344;
     }
-    .background{
-    
-      background-image: url("/src/assets/background_login_signup.svg");
-    
-      /* Full height */
-      height: 100%;
-    
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    @font-face {
-      font-family: 'Roboto';
-      src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    }
-    h1 {
-            width: 300px;
-            height: 24px;
-           scale:120%;
-            /* UI Element/Button */
-           position: absolute;
-           left: -20px;
-            font-family: "Roboto";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 24px;
-            /* identical to box height, or 133% */
-           
-            align-items: center;
-            text-align: center;
-           
-            /* Wireframes/White */
-           
-            color: #ffffff;
-           
-            /* Inside auto layout */
-           
-            flex: none;
-            order: 0;
-            flex-grow: 1;
-    }
+.btn-t-rcomp{
+  font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
+}
