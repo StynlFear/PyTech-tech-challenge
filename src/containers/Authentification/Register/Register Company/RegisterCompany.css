@@ -145,6 +145,7 @@
     
     .btn-1:hover {
      box-shadow: 5px 5px 10px #121344;
+<<<<<<< HEAD
     }
     .background{
     
@@ -188,4 +189,6 @@
             flex: none;
             order: 0;
             flex-grow: 1;
+=======
+>>>>>>> 6039505081a91e647b15261a73d6183ce04f4cc9
     }

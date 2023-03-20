@@ -23,6 +23,17 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/123" element={< PageType/>} />
+import CForm from "./containers/Create Form/CreateForm.jsx";
+import { Popup } from "./components/Popup/Popup.jsx";
+import { Editor } from '@tinymce/tinymce-react';
+import "./App.css";
+function App() {
+  return (
+    <div className="App">
+      <LoginPage/>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={< CForm/>} />
           <Route path="Login" element={<LoginPage />} />
           <Route path="RegisterInd" element={<RegisterIndPage/>} />
           <Route path="RegisterComp" element={<RegisterCompPage/>} />
@@ -31,7 +42,6 @@ function App() {
           <Route path="Forgot" element={<Forgotpassword/>} />
           <Route path="Reset" element={<ResetPassword/>} />
           <Route path="/test" element={<Startup/>} />
-          <Route path="/" element={<Pageuser/>} />
         </Routes>
       </BrowserRouter>
     </div>

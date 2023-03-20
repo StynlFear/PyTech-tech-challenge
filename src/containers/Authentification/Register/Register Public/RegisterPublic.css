@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-image: url("/src/assets/background_login_signup.svg");
     
@@ -7,6 +8,9 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
 }
+=======
+
+>>>>>>> 6039505081a91e647b15261a73d6183ce04f4cc9
 .fm-lb{
     position: absolute;
     left: 10px;
@@ -172,6 +176,7 @@ body {
      order: 0;
      flex-grow: 1;
     }
+<<<<<<< HEAD
     h1 {
         width: 300px;
         height: 24px;
@@ -199,6 +204,9 @@ body {
         order: 0;
         flex-grow: 1;
 }
+=======
+   
+>>>>>>> 6039505081a91e647b15261a73d6183ce04f4cc9
     .txt-1{
         position: absolute;
         top: 10px;
