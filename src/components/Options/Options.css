@@ -1,0 +1,32 @@
+.field-input-opt {
+    box-sizing: border-box;
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    width: 400px;
+    height: 42px;
+  
+    background: #eff6ff;
+    /* Blue 3 */
+  
+    border: 1px solid #8595b0;
+    border-radius: 8px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  .delete-options {
+    position: relative;
+    color: #05367a;
+    top: 35px;
+    left: 500px;
+    scale: 150%;
+  }

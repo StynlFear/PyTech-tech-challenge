@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  }
+body
+{
+    background-color: rgba(219,235,255,255);
+}
+.titleformpage{
+position: absolute;
+width: 203px;
+height: 56px;
+left: 191px;
+top: 35px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 56px;
+/* identical to box height, or 175% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #05367A;
+}
+.subtitlecreateform1
+{
+    position: absolute;
+width: 165px;
+height: 28px;
+left: 193px;
+top: 275.44px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #05367A;
+}
+.subtitlecreateform2
+{
+    position: absolute;
+width: 95px;
+height: 28px;
+left: 191px;
+top: 1123.44px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #05367A;
+}
+
+.subtitlecreateform3
+{
+    position: absolute;
+width: 230px;
+height: 28px;
+left: 190px;
+top: 1810.44px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #05367A; 
+}
+.subtitle_titleformpage{
+    position: absolute;
+width: 49px;
+height: 28px;
+left: 191px;
+top: 117px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #05367A;
+}
+.mini-title-form{
+
+
+position: absolute;
+top: 120px;
+left: 420px;
+width: 73px;
+height: 14px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 14px;
+/* identical to box height, or 88% */
+
+
+color: #05367A;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.input-title-form{
+    display: flex;
+    position: absolute;
+    top:150px;
+    left: 420px;
+    flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 16px;
+color: black;
+width: 702px;
+height: 42px;
+
+background: #EFF6FF;
+/* Blue 3 */
+
+border: 1px solid #8595B0;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+.line-form{
+position: absolute;
+width: 1061px;
+height: 0px;
+left: 190px;
+top: 231.44px;
+border: 1px solid #002372;
+}
+.dynamic_drop_down{
+    position: absolute;
+    left: 420px;
+    top: 330px;
+    box-sizing: border-box;
+
+/* Auto layout */
+color: black;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 16px;
+
+width: 343px;
+height: 42px;
+
+background: #EFF6FF;
+/* Blue 3 */
+
+border: 1px solid #8595B0;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+}
+.mini-title-dynamicfields
+{
+    position: absolute;
+    left: 420px;
+    top: 300px;
+    width: 109px;
+    height: 14px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    /* identical to box height, or 88% */
+    color: #05367A;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
