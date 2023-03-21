@@ -1,42 +1,27 @@
-// REACT IMPORTS
-import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import React from 'react';
+import './Sidebar.css';
+import { FaHome, FaPlus, FaList, FaSignOutAlt } from 'react-icons/fa';
 
-import { Router } from "react-router-dom";
-export const SideBar = () => {
-  const menuItem=[
-    {
-      path:"/Login",
-      name: "Login",
-    },
-    {
-      path:"/Forgot",
-      name: "Forgot",
-    
-    },
-    {
-      path:"/Reset",
-      name: "Reset",
-    }
-  ]
-  
+const Sidebar = () => {
+  const buttons = [
+    { text: 'Home', icon: <FaHome /> },
+    { text: 'Create Form', icon: <FaPlus /> },
+    { text: 'Forms', icon: <FaList /> },
+    { text: 'Logout', icon: <FaSignOutAlt /> },
+  ];
+
   return (
-  <div>
-
-  
-    <div className="container12">
-        <div className="sidebar12">
-          <div className="top_section12">
-            <div className="bars12">
-              <h1>Logo</h1>
-              <div className="bars12">
-              </div>
-            </div>
-          </div>
-        </div>
-       
-     
-    </div>
+    <div className="sidebar">
+      <h1 class="sidebar-h sidebar-text">Inteligent Forms</h1>
+      <hr className='sidebar-hr'/>
+      {buttons.map((button) => (
+        <button className="sidebar-btn" key={button.text}>
+          {button.icon}
+          <span className="sidebar-text">{button.text}</span>
+        </button>
+      ))}
     </div>
   );
 };
+
+export default Sidebar;

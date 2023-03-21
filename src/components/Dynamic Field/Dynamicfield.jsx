@@ -81,10 +81,8 @@ export const Field = () => {
             />
             <br />
             <label class="field-txt">Mandatory </label>
-            <input class="inp-mand-cf" type="checkbox"></input>
-            <br />
-            <br />
-            
+            <br/><br/>
+            <input class="field-input inl check-dyn" type="checkbox"></input>
             <label class="field-txt">Field Type</label>
             <Dropdown
               action=""
