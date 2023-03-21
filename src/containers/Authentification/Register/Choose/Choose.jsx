@@ -10,6 +10,7 @@ import SignInd from './sign-ind.svg'
 export const  PageType = () => {
   return (
     <div >
+      <img src="./src/images/background.jpg" alt="" className="log-back-img1" />
     <div class="bg-re">
       <div>
         <p class="t1-ca">Create Account</p>
@@ -21,7 +22,7 @@ export const  PageType = () => {
         <router>
           <Link to="/RegisterComp"> <img src={SignComp}  class="img-1" /></Link>
           <div className="company-t">Company</div>
-          </router>
+        </router>
         </div>
         <div class="bx-1">
         <router>

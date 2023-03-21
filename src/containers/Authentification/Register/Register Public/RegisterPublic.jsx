@@ -1,5 +1,7 @@
 // REACT IMPORTS
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
+
 // FORM DATA IMPORT
 import { RegisterFormData } from "./RegisterFormData";
 import "./RegisterPublic.css"
@@ -8,6 +10,7 @@ import Background from '../background_login_signup.svg'
 export const RegisterPubPage = () => {
   return (
     <div class="background">
+        <img src="./src/images/background.jpg" alt="" className="log-back-img4" />
      <div className="fm-bg">
      <div class="txt-1">
         <p class="t1">Sign up as a Public Institution</p>
@@ -18,9 +21,10 @@ export const RegisterPubPage = () => {
           RegisterFormData.map((data) => {
             return (
               <div className="fm-1" key={data.id}>
+
                 <label className="fm-lb-rpub" htmlFor={data.name}>{data.name}</label><br/>
                 <input className="fm-in" type={data.type} placeholder={data.placeholder} />
-                <div><button className="btn-1"><h1 className="btn-t-rpub">Create account</h1> </button></div>
+                <div><button className="btn-1"><h1 className="btn-t-rpub"> <Link to="/Login">Create account</Link></h1> </button></div>
               </div>
             );
           })}

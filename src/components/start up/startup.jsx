@@ -11,6 +11,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 export const Startup = () => {
   return (
     <div>
+      <div className="bg-sp"></div>
         <div className="sp-top-grid">
         <FontAwesomeIcon icon={faCheckCircle}  color="white" size="2x" className="sp-check"/>
         <div className="sp-text">Intelligent Forms</div>

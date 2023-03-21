@@ -14,7 +14,7 @@
   color: #05367a;
   margin-bottom: 30px;
   position: absolute;
-  left: 193px;
+  left: 293px;
 }
 .field-txt {
     width: 73px;
@@ -39,7 +39,7 @@ flex-grow: 0;
 }
 .field-input {
   box-sizing: border-box;
-
+  
   /* Auto layout */
 
   display: flex;
@@ -63,6 +63,37 @@ flex-grow: 0;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  
+}
+input[type="checkbox"] {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  
+  width: 20px;
+  height: 20px;
+  
+  background: #E6EAFC;
+  border: 1px solid #94A2BA;
+  border-radius: 4px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+}
+.check-dyn{
+  position: relative;
+  top: 580px;
+  left: 500px;
 }
 .field-header {
   width: 172px;
