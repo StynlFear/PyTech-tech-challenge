@@ -7,7 +7,7 @@ import "./Choose.css"
 import SignComp from './sign-comp.svg'
 import SignPub from './sign-pub.svg'
 import SignInd from './sign-ind.svg'
-export const PageType = () => {
+export const  PageType = () => {
   return (
     <div >
     <div class="bg-re">
