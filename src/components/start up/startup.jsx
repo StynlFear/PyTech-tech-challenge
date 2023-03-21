@@ -11,11 +11,12 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 export const Startup = () => {
   return (
     <div>
+      <div className="bg-sp"></div>
         <div className="sp-top-grid">
         <FontAwesomeIcon icon={faCheckCircle}  color="white" size="2x" className="sp-check"/>
         <div className="sp-text">Intelligent Forms</div>
-        <button className="sp-login">Log in</button>
-        <button className="sp-sign">Sign Up</button>
+        <Link to="/Login"> <button className="sp-login">Log in</button></Link>
+        <Link to="/Type"><button className="sp-sign">Sign Up</button></Link>
         <hr className="sp-bar" />
         </div>
        
@@ -63,7 +64,7 @@ export const Startup = () => {
             <img src="./src/images/sp-5.png" alt="" className="sp-img-5"/>
         </section>
         <section className="sp-buy">
-        <div className="up-free">
+              <div className="up-free">
               <div className="icon-book icon-book2">  
                 <FontAwesomeIcon icon={faBookBookmark} size="2x" color="#696cff" />
               </div>
@@ -133,7 +134,7 @@ export const Startup = () => {
             <img src="./src/images/girl.png" alt="img" className="sp-girlimg"/>
             <div className="sp-title-girl">Still not convinced? Start with now!</div>
             <div className="sp-text-girl">You will get full access to create 3 forms for free.</div>
-            <button className="up-girl-btn">Sign Up for free</button>
+            <Link to="/Type"> <button className="up-girl-btn">Sign Up for free</button></Link>
        </section>
     </div>
 

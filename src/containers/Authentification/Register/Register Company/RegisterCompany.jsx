@@ -1,4 +1,5 @@
 // REACT IMPORTS
+import { Outlet, Link } from "react-router-dom";
 import React, { useState } from "react";
 // FORM DATA IMPORT
 import axios from "../../../../components/Axios/Axios";
@@ -22,6 +23,9 @@ export const RegisterCompPage = () => {
       .catch(function (error) {
         console.log(error);
       });
+      
+        
+      
   };
 
   const handleChange = (e) => {
@@ -33,9 +37,10 @@ export const RegisterCompPage = () => {
   };
   return (
     <div className="background">
+        <img src="./src/images/background.jpg" alt="" className="log-back-img5" />
       <div className="fm-bg">
         <div class="txt-1">
-          <p class="t1">Sign up as a Company</p>
+          <p class="t1-rcomp">Sign up as a Company</p>
           <p class="t2-rcomp">Please sign in to your registered account</p>
         </div>
         <form className="fm">
@@ -57,13 +62,18 @@ export const RegisterCompPage = () => {
                 </div>
               );
             })}
-          <button
-            className="btn-2"
-            type="submit"
-            onClick={(e) => handleClick(e)}
-          >
-            <h1><div className="btn-t-rcomp">Create account</div> </h1>
-          </button>
+          <router>
+              <div> <button
+                className="btn-2"
+                type="submit"
+                onClick={(e) => handleClick(e)}
+              >
+                <h1><div className="btn-t-rcomp">  <Link to="/Login">
+          Create account</Link></div> </h1>
+
+          
+              </button></div>
+          </router>
         </form>
       </div>
     </div>

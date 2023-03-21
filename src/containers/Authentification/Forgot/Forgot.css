@@ -162,30 +162,7 @@ flex-grow: 1;
  left:-273px;
  top:50px;
 }
- input[type="checkbox"] {
-    box-sizing: border-box;
 
-    /* Auto layout */
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    
-    width: 24px;
-    height: 24px;
-    
-    background: #E6EAFC;
-    border: 1px solid #94A2BA;
-    border-radius: 4px;
-    
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-      }
 .text1
 {
     position: absolute;

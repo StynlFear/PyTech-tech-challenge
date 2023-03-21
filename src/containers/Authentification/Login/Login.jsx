@@ -8,7 +8,7 @@ import { Router } from "react-router-dom";
 export const LoginPage = () => {
   return (
     <div>
-     
+     <img src="./src/images/background.jpg" alt="" className="log-back-img" />
       <div class="log">
         <div class="log-tit">
             <h1 className="login-title-txt1">Log in</h1> 
@@ -29,7 +29,7 @@ export const LoginPage = () => {
       </form>
       </div>
       <div>
-       <input type="checkbox"></input>
+       <input type="checkbox" className="login-check"></input>
         <div className="log-remb">Remember me</div>
         <router>
       <Link to="/Forgot"><p class="log-forgot1">Forgot password?</p></Link>
