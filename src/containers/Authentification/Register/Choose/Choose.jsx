@@ -12,9 +12,9 @@ export const PageType = () => {
     <div >
     <div class="bg-re">
       <div>
-        <p class="t1">Create Account</p>
-        <p class="t2">Sign up for free and become a member.</p>
-        <p class="t3">Choose Account type</p>
+        <p class="t1-ca">Create Account</p>
+        <p class="t2-ca">Sign up for free and become a member.</p>
+        <p class="t3-ca">Choose Account type</p>
       </div>
       <div class="bx">
         <div class="bx-1">
@@ -40,7 +40,7 @@ export const PageType = () => {
         </div>
         <div class="tx-3">
             <router>
-          <Link to="/Login" class="t5">Log in</Link>
+          <Link to="/Login" class="t5-ca">Log in</Link>
           </router>
         </div>
       </div>

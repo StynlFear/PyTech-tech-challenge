@@ -36,14 +36,14 @@ export const RegisterCompPage = () => {
       <div className="fm-bg">
         <div class="txt-1">
           <p class="t1">Sign up as a Company</p>
-          <p class="t2">Please sign in to your registered account</p>
+          <p class="t2-rcomp">Please sign in to your registered account</p>
         </div>
         <form className="fm">
           {RegisterFormData &&
             RegisterFormData.map((data) => {
               return (
                 <div className="fm-1" key={data.id}>
-                  <label className="fm-lb" htmlFor={data.name}>
+                  <label className="fm-lb-rcomp" htmlFor={data.name}>
                     {data.name}
                   </label>
                   <br />
@@ -62,7 +62,7 @@ export const RegisterCompPage = () => {
             type="submit"
             onClick={(e) => handleClick(e)}
           >
-            <h1>Create account</h1>
+            <h1><div className="btn-t-rcomp">Create account</div> </h1>
           </button>
         </form>
       </div>

@@ -32,7 +32,7 @@ export const LoginPage = () => {
        <input type="checkbox"></input>
         <div className="log-remb">Remember me</div>
         <router>
-      <Link to="/Forgot"><p class="log-forgot">Forgot password?</p></Link>
+      <Link to="/Forgot"><p class="log-forgot1">Forgot password?</p></Link>
       </router>
       <button className="log-btn" >Login</button> 
       <div class="log--dntacc">Don't have an account?</div>
