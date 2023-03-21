@@ -8,13 +8,15 @@ import { Forgotpassword } from "./containers/Authentification/Forgot password/fo
 import { ResetPassword } from "./containers/Authentification/Reset password/resetpassword.jsx";
 import { Startup } from "./components/start up/startup.jsx";
 import CForm from "./containers/Create Form/CreateForm.jsx";
+import GenerateQRCode from "./containers/GenerateQr/GenerateQr.jsx";
+import FormList from "./containers/AllForms/FormsList.jsx";
 import "./App.css";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<CForm />} />
+          <Route exact path="/" element={<FormList />} />
           <Route path="Login" element={<LoginPage />} />
           <Route path="RegisterInd" element={<RegisterIndPage />} />
           <Route path="RegisterComp" element={<RegisterCompPage />} />
