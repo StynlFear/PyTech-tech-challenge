@@ -7,7 +7,8 @@ export const Forgotpassword = () => {
   return (
     
     <div>
-        
+              <img src="./src/images/background.jpg" alt="" className="log-back-img10" />
+
         <div class="forgt">
         <div class="forgt-h3">
             <h3 className="fg-tit-text">Forgot password</h3>
