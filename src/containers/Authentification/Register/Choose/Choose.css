@@ -14,6 +14,14 @@
     );
     border-radius: 30px;
   }
+  .log-back-img1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
   .t1-ca {
     position: relative;
     width: 471px;

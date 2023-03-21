@@ -9,6 +9,14 @@
      line-height: 40px;
      color: white;
     }
+    .log-back-img4{
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
     .fm-in{
       box-sizing: border-box;
     
