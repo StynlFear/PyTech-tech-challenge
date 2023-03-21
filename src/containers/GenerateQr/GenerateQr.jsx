@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import QRCode from 'qrcode.react';
 import Sidebar from '../../components/sidebar/Sidebar';
+import "./GenerateQr.css"
 function GenerateQRCode() {
   const [url, setUrl] = useState('');
   const qrCodeRef = useRef(null);
@@ -24,14 +25,21 @@ function GenerateQRCode() {
 
   return (
     <div>
-        <h1>Generate Qr code</h1>
-        <h1>Download Qr code</h1>
-        <h2>Download qr code created for your link</h2>
-        <p>Link to share</p>
+      <div className="qr-cont"></div>
+      <div style={{backgroundColor: '#DBEBFF', height: '100vh'}}>
+        <h1 className='gq-t1'>Generate QR code</h1>
+        <h1 className='gq-t2'>Download QR code</h1>
+        <h2 className='gq-t3'>Download QR code created for your link</h2>
+        <p className='gq-t4'>Link to share</p>
         <Sidebar/>
-      <input type="text" value={url} onChange={handleChange} />
-      <QRCode value={url} ref={qrCodeRef} />
-      <button onClick={handleDownload}>Download QR Code</button>
+      <input type="text " className='inp-gq' value={url} onChange={handleChange} />
+      
+        <div className='qr-code-p '>
+          <QRCode value={url} ref={qrCodeRef} />
+        </div>
+   
+      <button onClick={handleDownload} className="qr-btn-d">Download</button>
+      </div>
     </div>
   );
 }

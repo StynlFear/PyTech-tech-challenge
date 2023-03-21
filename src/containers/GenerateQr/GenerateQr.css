@@ -7,3 +7,165 @@ qr-input {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
   
+.gq-t1{
+  position: absolute;
+width: 277px;
+height: 56px;
+left: 220px;
+top: 16px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 56px;
+/* identical to box height, or 175% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #05367A;
+}
+
+
+.gq-t2{
+  position: absolute;
+width: 271px;
+height: 40px;
+left: 220px;
+top: 80px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+/* identical to box height, or 125% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #05367A;
+}
+
+.gq-t3{
+  position: absolute;
+width: 434px;
+height: 40px;
+left: 220px;
+top: 120px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 40px;
+/* identical to box height, or 167% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #05367A;
+}
+.gq-t4{
+  width: 92px;
+height: 14px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 14px;
+/* identical to box height, or 88% */
+
+
+color: #05367A;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+position: absolute;
+top: 300px;
+left: 220px;
+}
+.inp-gq{
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 16px;
+
+width: 790px;
+height: 54px;
+
+background: #EFF6FF;
+/* Blue 3 */
+
+border: 1px solid #8595B0;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+position: absolute;
+top: 350px;
+left: 220px;
+}
+.qr-code-p{
+  position: absolute;
+width: 253px;
+height: 251px;
+left: 540px;
+top: 50%;
+scale: 1.3;
+}
+
+.qr-btn-d{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 27px 32px;
+gap: 10px;
+
+position: absolute;
+width: 163px;
+height: 48px;
+left: 502px;
+top:670px;
+
+background: #0377FF;
+border-radius: 10px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 20px;
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.qr-cont{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 12px;
+  position: absolute;
+  top: 425px;
+  left: 485px;
+  z-index: -0.5;
+}
