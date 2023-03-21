@@ -97,9 +97,9 @@ input:focus {
   display: inline-flex;
 }
 .inl {
-  position: relative;
-  left: 90px;
-  bottom: 20px;
+  position: absolute;
+  left: 100px;
+  bottom: 40px;
 }
 
 .field--keyword {

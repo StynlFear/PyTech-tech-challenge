@@ -6,12 +6,14 @@ import "../../components/Dynamic Field/Dynamicfield.css";
 import "./CreateForm.css";
 import { Sections } from "../../components/Sections/SectionsField.jsx";
 import { Data } from "../../components/DataRetention/DataRetentionPeriod.jsx";
+import Sidebar from "../../components/sidebar/Sidebar.jsx";
 /// DATA IMPORT
 
 export const CForm = () => {
   return (
     <div className="create-form-container">
-      <div>
+      <Sidebar/>
+      <div class="form-section">
         <h1 class="create-header">Create a Form</h1>
         <div>
           <h1 class="section-header">Title</h1>
