@@ -10,15 +10,18 @@ import { Startup } from "./components/start up/startup.jsx";
 import CForm from "./containers/Create Form/CreateForm.jsx";
 import GenerateQRCode from "./containers/GenerateQr/GenerateQr.jsx";
 import FormList from "./containers/AllForms/FormsList.jsx";
+import Cerere from "./containers/Form/Cerere.jsx";
 import "./App.css";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<CForm/>} />
+          <Route exact path="/" element={<Cerere/>} />
           <Route path="Login" element={<LoginPage />} />
+          <Route path="Forms" element={<FormList />} />
           <Route path="RegisterInd" element={<RegisterIndPage />} />
+          <Route path="CreateForm" element={<CForm />} />
           <Route path="RegisterComp" element={<RegisterCompPage />} />
           <Route path="RegisterPub" element={<RegisterPubPage />} />
           <Route path="Type" element={<PageType />} />
