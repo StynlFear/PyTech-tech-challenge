@@ -6,7 +6,7 @@ export const ResetPassword = () => {
   return (
     
     <div>
-        
+         <img src="./src/images/background.jpg" alt="" className="log-back-img11" />
         <div class="reset">
         <div class="reset-h3">
             <h3 className="rp-title-cont">Reset password</h3>
