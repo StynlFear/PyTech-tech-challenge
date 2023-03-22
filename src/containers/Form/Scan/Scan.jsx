@@ -1,54 +1,61 @@
 import React, { useState } from "react";
-import { DocumentAnalysisClient } from "@azure/ai-form-recognizer";
-import { DefaultAzureCredential } from "@azure/identity";
+import { AzureKeyCredential, DocumentAnalysisClient } from "@azure/ai-form-recognizer";
 
-const AnalyzeIdCard = () => {
-  const [recognizedText, setRecognizedText] = useState(null);
+function Scanner() {
+  const [result, setResult] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
-  const analyzeIdCard = async () => {
+  const analyzeDocument = async () => {
+    const endpoint = " https://pytechscannerstynlfear.cognitiveservices.azure.com/";
+    const credential = new AzureKeyCredential("1ef757a844874e3f812161e6cd433a9f");    
+    const client = new DocumentAnalysisClient(endpoint, credential);
+    const modelId = "id-2";
+
     try {
-      const credential = new DefaultAzureCredential();
-      const client = new DocumentAnalysisClient(
-        "https://Pytech-TechChallenge-Scan.cognitiveservices.azure.com",
-        credential
+      const poller = await client.beginAnalyzeDocument(
+        modelId,
+        selectedFile
       );
 
-      const file = document.getElementById("id-card-file").files[0];
-      if (!file) {
-        alert("Please select an image of your Romanian ID card.");
-        return;
+      const {
+        documents: [document],
+      } = await poller.pollUntilDone();
+
+      if (!document) {
+        throw new Error("Expected at least one document in the result.");
       }
 
-      const poller = await client.beginAnalyzeDocument("<model ID>", file, {
-        contentType: "image/jpeg",
-        onProgress: (state) => {
-          console.log(`Status: ${state.status}`);
-        }
-      });
-
-      const result = await poller.pollUntilDone();
-      const idCard = result?.documents?.[0];
-
-      if (!idCard) {
-        alert("Could not recognize the ID card. Please try again.");
-        return;
-      }
-
-      const fields = idCard.fields;
-      const recognizedText = `${fields["CNP"].value} ${fields["Nume"].value} ${fields["Prenume"].value}`;
-      setRecognizedText(recognizedText);
+      setResult(document);
     } catch (error) {
-      console.error(error);
+      console.error("An error occurred:", error);
     }
+  };
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
   };
 
   return (
     <div>
-      <input type="file" id="id-card-file" accept=".jpg" />
-      <button onClick={analyzeIdCard}>Analyze ID Card</button>
-      {recognizedText && <div>{recognizedText}</div>}
+      <input type="file" onChange={handleFileChange} />
+      <button onClick={analyzeDocument}>Analyze Document</button>
+      {result && (
+        <div>
+          <h3>Extracted document:</h3>
+          <p>Document type: {result.docType}</p>
+          <p>Confidence: {result.confidence || "<undefined>"}</p>
+          <h3>Fields:</h3>
+          <ul>
+            {Object.keys(result.fields).map((fieldName) => (
+              <li key={fieldName}>
+                {fieldName}: {result.fields[fieldName].text}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
-};
+}
 
-export default AnalyzeIdCard;
+export default Scanner;
