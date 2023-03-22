@@ -9,6 +9,14 @@
      line-height: 40px;
      color: white;
     }
+    .error {
+      border-color: red;
+    }
+    .error-message {
+      color: red;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
     .fm-in{
       box-sizing: border-box;
     

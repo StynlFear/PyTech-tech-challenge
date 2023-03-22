@@ -7,8 +7,37 @@ import { RegisterFormData } from "./RegisterFormData";
 import "./RegisterCompany.css";
 export const RegisterCompPage = () => {
   const [userReg, setUserReg] = useState([{}]);
-  let handleClick = (e) => {
-    e.preventDefault();
+  const [errors, setErrors] = useState({});
+const [isSubmitting, setIsSubmitting] = useState(false);
+let handleClick = (e) => {
+  e.preventDefault();
+
+  // validate form fields
+  const formErrors = {};
+  if (!userReg.fullName) {
+    formErrors.fullName = "Full name is required";
+  }
+  if (!userReg.password) {
+    formErrors.password = "Password is required";
+  }
+  if (!userReg.email) {
+    formErrors.email = "Email is required";
+  } else if (!/\S+@\S+\.\S+/.test(userReg.email)) {
+    formErrors.email = "Invalid email address";
+  }
+  if (!userReg.fullAdress) {
+    formErrors.fullAdress = "Address is required";
+  }
+  if (!userReg.fiscalCode) {
+    formErrors.fiscalCode = "Fiscal code is required";
+  }
+
+  // set errors and mark form as submitted
+  setErrors(formErrors);
+  setIsSubmitting(true);
+
+  // make API call if there are no errors
+  if (Object.keys(formErrors).length === 0) {
     axios
       .post("/v1/users/", {
         name: userReg.fullName,
@@ -23,18 +52,18 @@ export const RegisterCompPage = () => {
       .catch(function (error) {
         console.log(error);
       });
-      
-        
-      
-  };
+  }
+};
 
-  const handleChange = (e) => {
-    const id = e.target.id;
-    const value = e.target.value;
+const handleChange = (e) => {
+  const id = e.target.id;
+  const value = e.target.value;
 
-    setUserReg({ ...userReg, [id]: value });
-    console.log("zzz", userReg);
-  };
+  setUserReg({ ...userReg, [id]: value });
+
+  // clear error for this field
+  setErrors((errors) => ({ ...errors, [id]: undefined }));
+};
   return (
     <div className="background">
         <img src="./src/images/background.jpg" alt="" className="log-back-img5" />
@@ -53,12 +82,14 @@ export const RegisterCompPage = () => {
                   </label>
                   <br />
                   <input
-                    id={data.id}
-                    className="fm-in"
-                    type={data.type}
-                    placeholder={data.placeholder}
-                    onChange={handleChange}
-                  />
+  id={data.id}
+  type={data.type}
+  placeholder={data.placeholder}
+  onChange={handleChange}
+  // display error message if there is one
+  className={errors[data.id] ? "fm-in error" : "fm-in"}
+/>
+{errors[data.id] && <div className="error-message">{errors[data.id]}</div>}
                 </div>
               );
             })}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import AnalyzeIdCard from "./Scan/Scan";
+import Scanner from "./Scan/Scan";
 function Cerere() {
   const [formData, setFormData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -69,7 +69,7 @@ function Cerere() {
         </div>
       )}
       <h1>Analyze Romanian ID Card</h1>
-          <AnalyzeIdCard/>
+          <Scanner/>
     </div>
   );
 }
