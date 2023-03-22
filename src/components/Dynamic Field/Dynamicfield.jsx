@@ -51,7 +51,10 @@ export const Field = () => {
             <DropdownMenu>
             {index ? (
               
-              <Delsecpop  onClick={() => removeFormFields(index)}/>
+              <i
+                  class="fa fa-trash delete"
+                  onClick={() => removeFormFields(index)}
+                />
             ) : null}
             <label class="field-txt">Dynamic Field Name </label>
             <br />

@@ -30,7 +30,6 @@ function App() {
           <Route path="Reset" element={<ResetPassword />} />
           <Route path="/test" element={<Startup />} />
           <Route path="/" element={<GenerateQRCode/>}/>
-          <Route path="/pop" element={<Delsecpop/>}/>
           <Route path="/home" element={<Pageuser/>}/>
         </Routes>
       </BrowserRouter>

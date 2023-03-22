@@ -1,9 +1,169 @@
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 280px;
   }
-  
+  .formpic{
+    position: absolute;
+width: 70.18px;
+height: 97px;
+left: 30px;
+top: 50px;
+box-shadow:#000;
+  }
+  .more-cerere{
+    position: absolute;
+width: 55px;
+height: 26px;
+left: 850px;
+top: 87px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 56px;
+/* or 280% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #002372;
+  }
+  .publish-cerere{
+    position: absolute;
+width: 128.34px;
+height: 27px;
+left: 650px;
+top: 87px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 56px;
+/* or 280% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #002372;
+  }
+  .submision-cerere{
+    position: absolute;
+width: 161px;
+height: 33px;
+left: 450px;
+top: 85px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 56px;
+/* or 280% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #002372;
+
+  }
+  .cerere-created{
+    position: absolute;
+width: 174px;
+height: 24px;
+left: 130px;
+top: 115px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+color: #002372;
+  }
+  .cerere-name{
+    position: absolute;
+width: 235px;
+height: 56px;
+left: 130px;
+top: 50px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 56px;
+width: 300px;
+/* identical to box height, or 233% */
+
+display: flex;
+align-items: center;
+color: #001D5B;
+
+  }
+  .sf-t{
+    position: absolute;
+width: 540px;
+height: 56px;
+left: 370px;
+top: 24px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 56px;
+/* identical to box height, or 175% */
+
+display: flex;
+align-items: center;
+
+color: #05367A;
+  }
+  .s-lp{
+    /* Input body */
+
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 16px;
+
+width: 432px;
+height: 52px;
+
+background: #EFF6FF;
+/* Blue 3 */
+
+border: 1px solid #8595B0;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+position: absolute;
+left: 370px;
+top: 100px;
+  }
   .pagination a {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -13,9 +173,31 @@
     border: 1px solid #ddd;
     border-radius: 3px;
   }
-  
+  .form-top{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 20px;
+gap: 20px;
+
+width: 80%;
+height: 54px;
+
+background: #B4D5FC;
+border: 1px solid #000000;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+position: absolute;
+top: 160px;
+left: 300px;
+  }
   .pagination a:hover {
-    background-color: #ddd;
+  
   }
   
   .pagination .active {
@@ -29,9 +211,25 @@
     pointer-events: none;
   }
   .forms-container {
+    position: relative;
 width: 971px;
 height: 163px;
-margin-top: 20px;
+left: 369px;
+top: 158px;
+margin-top: 40px;
 background: #A4CAFF;
 border-radius: 20px;
+
   }
+.pagination .next-page{
+ background-color:  #05367A;
+ font-size: large;
+ color: white;
+
+}
+.pagination .previous-page{
+  background-color:  #05367A;
+  font-size: large;
+color: white;
+
+ }
