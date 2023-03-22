@@ -10,6 +10,7 @@ import { Startup } from "./components/start up/startup.jsx";
 import CForm from "./containers/Create Form/CreateForm.jsx";
 import GenerateQRCode from "./containers/GenerateQr/GenerateQr.jsx";
 import FormList from "./containers/AllForms/FormsList.jsx";
+import Delsecpop from "./components/delete_section/delsecpop.jsx";
 import "./App.css";
 function App() {
   return (
