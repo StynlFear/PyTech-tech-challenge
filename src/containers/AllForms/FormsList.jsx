@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import './FormsList.css';
+import Sidebar from '../../components/sidebar/Sidebar';
 
 const FormsList = () => {
   const [forms, setForms] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [pageNumber, setPageNumber] = useState(0);
-  const formsPerPage = 2;
+  const formsPerPage = 5  ;
   const pagesVisited = pageNumber * formsPerPage;
   useEffect(() => {
     const fetchData = async () => {
@@ -32,23 +33,33 @@ const FormsList = () => {
     setPageNumber(selected);
   };
   return (
+   
     <div className="forms-list">
+       <Sidebar/>
+      <div style={{backgroundColor: '#DBEBFF', height: '100%'}}>
      <h1>Forms List</h1>
 <input
   type="text"
   placeholder="Search forms by name"
   value={searchTerm}
   onChange={handleSearch}
+  className="s-lp"
 />
 {filteredForms.slice(pagesVisited, pagesVisited + formsPerPage).map((form) => (
+  
   <div class="forms-container" >
+    
   <div key={form._id} className="form">
-    <h2>{form.title}</h2>
-    <h2>Created on {new Date(form.retention_date).toLocaleDateString('en-GB', {
+    <h2 className='cerere-name'>{form.title}</h2>
+    <h2 className='cerere-created'>Created on {new Date(form.retention_date).toLocaleDateString('en-GB', {
   day: '2-digit',
   month: '2-digit',
   year: 'numeric'
 }).replace(/\//g, '.')}</h2>
+<img src="./src/images/form.png" alt="" className='formpic'/>
+<h3 className='submision-cerere'>Submissions</h3>
+<h3 className='publish-cerere'>Publish Form</h3>
+<h3 className="more-cerere">More</h3>
     {form.sections.map((section) => (
       <div key={section._id}>
 
@@ -64,11 +75,13 @@ const FormsList = () => {
     ))}
     <br />
   </div>
+ 
   </div>
+  
 ))}
       <ReactPaginate
-  previousLabel={'Previous'}
-  nextLabel={'Next'}
+  previousLabel={'<'}
+  nextLabel={'>'}
   pageCount={pageCount}
   onPageChange={changePage}
   containerClassName={'pagination'}
@@ -81,7 +94,11 @@ const FormsList = () => {
   breakLabel={'...'}
   breakClassName={'break'}
 />
+<div className="sf-t">All Forms</div>
     </div>
+    
+    </div>
+
   );
 };
 

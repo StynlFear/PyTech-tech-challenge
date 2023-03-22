@@ -3,6 +3,7 @@ import React from "react";
 import { Dropdown, Option } from "../DropDown/DropDown.jsx";
 import { DropdownMenu } from "../DropDownMenu/DropDownMenu.jsx";
 import { Options } from "../Options/Options.jsx";
+import Delsecpop from "../delete_section/delsecpop.jsx";
 // CSS IMPORT
 import "../../containers/Create Form/CreateForm.css";
 export const Field = () => {
@@ -49,10 +50,11 @@ export const Field = () => {
           <div className="form-inline" key={index}>
             <DropdownMenu>
             {index ? (
+              
               <i
-                class="fa fa-trash delete"
-                onClick={() => removeFormFields(index)}
-              />
+                  class="fa fa-trash delete"
+                  onClick={() => removeFormFields(index)}
+                />
             ) : null}
             <label class="field-txt">Dynamic Field Name </label>
             <br />

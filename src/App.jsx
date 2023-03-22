@@ -10,6 +10,7 @@ import { Startup } from "./components/start up/startup.jsx";
 import CForm from "./containers/Create Form/CreateForm.jsx";
 import GenerateQRCode from "./containers/GenerateQr/GenerateQr.jsx";
 import FormList from "./containers/AllForms/FormsList.jsx";
+import { Pageuser } from "./components/page user/pageuser.jsx";
 import Cerere from "./containers/Form/Cerere.jsx";
 import "./App.css";
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="Forgot" element={<Forgotpassword />} />
           <Route path="Reset" element={<ResetPassword />} />
           <Route path="/test" element={<Startup />} />
+          <Route path="/" element={<GenerateQRCode/>}/>
+          <Route path="/home" element={<Pageuser/>}/>
         </Routes>
       </BrowserRouter>
     </div>
