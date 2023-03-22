@@ -13,13 +13,14 @@ import FormList from "./containers/AllForms/FormsList.jsx";
 import { Pageuser } from "./components/page user/pageuser.jsx";
 import Cerere from "./containers/Form/Cerere.jsx";
 import Generate from "./containers/generateurl/generate.jsx";
+import Addform from "./containers/ADD FORM/addform.jsx";
 import "./App.css";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/321312" element={<Cerere/>} />
+          <Route exact path="/" element={<Cerere/>} />
           <Route path="Login" element={<LoginPage />} />
           <Route path="Forms" element={<FormList />} />
           <Route path="RegisterInd" element={<RegisterIndPage />} />
@@ -32,8 +33,8 @@ function App() {
           <Route path="/startup" element={<Startup />} />
           <Route path="/qr" element={<GenerateQRCode/>}/>
           <Route path="/home" element={<Pageuser/>}/>
-          <Route exact path="/" element={<Generate/>} />
-
+          <Route   path="/generate" element={<Generate/>} />
+          <Route  path="/addforms" element={<Addform/>} />
         </Routes>
       </BrowserRouter>
     </div>
