@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Scanner from "./Scan/Scan";
+
 function Cerere() {
   const [formData, setFormData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedFormId, setSelectedFormId] = useState(null);
 
   useEffect(() => {
-    axios.get("https://api-user-forms.herokuapp.com/v1/forms/")
+    axios
+      .get("https://api-user-forms.herokuapp.com/v1/forms/")
       .then((response) => {
         setFormData(response.data);
         setIsLoading(false);
@@ -54,22 +56,45 @@ function Cerere() {
       {selectedForm && (
         <div>
           <h2>{selectedForm.title}</h2>
-          <form onSubmit={handleSubmit}>
-            {/* Render the dynamic fields for the selected form */}
-            {selectedForm.dynamic_fields.map((field) => (
-              <div key={field._id}>
-                <label htmlFor={field.dynamic_field_name}>{field.dynamic_field_name}</label>
-                <br/>
-                <input type="text" name={field.dynamic_field_name} placeholder={field.placeholder} required={field.mandatory} />
-                <br/>
-              </div>
-            ))}
-            <button type="submit">Submit</button>
-          </form>
+          {selectedForm.sections.map((section) => (
+            <div key={section._id}>
+              <h3>{section.title}</h3>
+              <form onSubmit={handleSubmit}>
+                {/* Render the dynamic fields for the selected section */}
+                {section.dynamic_fields.map((field) => (
+                  <div key={field._id}>
+                    <label htmlFor={field.dynamic_field_name}>{field.label}</label>
+                    <br />
+                    {field.field_type.name === "select" ? (
+                      <select
+                        name={field.dynamic_field_name}
+                        required={field.mandatory}
+                      >
+                        <option value="">Select an option</option>
+                        {field.field_type.options.map((option) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    ) : (
+                      <input
+                        type={field.field_type.name}
+                        name={field.dynamic_field_name}
+                        placeholder={field.placeholder}
+                        required={field.mandatory}
+                      />
+                    )}
+                    <br />
+                  </div>
+                ))}
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          ))}
         </div>
       )}
-      <h1>Analyze Romanian ID Card</h1>
-          <Scanner/>
+      <Scanner />
     </div>
   );
 }
