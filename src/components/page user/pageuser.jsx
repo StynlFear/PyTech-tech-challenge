@@ -6,11 +6,12 @@ import { Router } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-
-
+import Sidebar from "../sidebar/Sidebar";
 export const Pageuser = () => {
   return (
-    <div>
+    <div >
+       <div className="back-pg"> </div>
+      <Sidebar/>
        <section className="up-sec1">
         <div className="up-user-img"></div>
         <img src="./src/images/imag-up-top.png" alt="ada" className="up-top-img"/>
@@ -83,9 +84,11 @@ export const Pageuser = () => {
               <div className="number-forms-text">Unlimited number of forms</div>
               <button className="try-b1 b1-text">Try</button>
             </div>
+            
        </section>
-        
-    </div>
+       </div>
+       
+   
   );
 };
    

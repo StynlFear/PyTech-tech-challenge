@@ -46,7 +46,7 @@ gap: 10px;
 position: absolute;
 width: 164px;
 height: 51.51px;
-left: 997px;
+left: 1457px;
 top: 20.68px;
 
 background: #E6EAFC;
@@ -84,7 +84,7 @@ gap: 10px;
 position: absolute;
 width: 162px;
 height: 51.51px;
-left: 1177px;
+left: 1630px;
 top: 20.68px;
 
 background: #0377FF;
@@ -259,7 +259,7 @@ color: #002372;
     height: 650px;
     left: 73px;
     top: 1180px;
-    
+    left: 200px;
     background: linear-gradient(179.97deg, #002372 0.02%, rgba(0, 35, 114, 0) 83.21%);
     border-radius: 20px;
 }
@@ -267,7 +267,7 @@ color: #002372;
     position: absolute;
     width: 396px;
     height: 650px;
-    left: 525px;
+    left: 790px;
     top: 1177px;
     
     background: linear-gradient(179.97deg, #002372 0.02%, rgba(0, 35, 114, 0) 83.21%);
@@ -277,7 +277,7 @@ color: #002372;
     position: absolute;
     width: 396px;
     height: 650px;
-    left: 977px;
+    left: 1377px;
     top: 1180px;
     
     background: linear-gradient(179.97deg, #002372 0.02%, rgba(0, 35, 114, 0) 83.21%);
@@ -349,7 +349,7 @@ color: #05367A;
     width: 609px;
     height: 56px;
    top: 2000px;
-   left: 42%;
+   left: 900px;
     
     font-family: 'Roboto';
     font-style: normal;
@@ -369,7 +369,7 @@ color: #05367A;
     position: absolute;
 width: 611px;
 height: 64px;
-left: 28%;
+left: 680px;
 top: 2100px;
 
 font-family: 'Roboto';
@@ -388,7 +388,7 @@ color: #577298;
 .sp-img-5{
     position: absolute;
     top: 2250px;
-    left: 390px;
+    left: 690px;
 }
 .sp-buy{
     position: absolute;
@@ -416,7 +416,7 @@ opacity: 0.04;
     position: absolute;
 width: 577px;
 height: 32px;
-left: calc(50% - 577px/2 - 288.5px);
+left: 185px;
 top: 4030px;
 
 font-family: 'Inter';
@@ -550,8 +550,7 @@ flex-grow: 0;
 .up-premium{
 
 position: absolute;
-left: 1008px;
-top: 800px;
+
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -560,7 +559,8 @@ gap: 20px;
 
 width: 304px;
 height: 663px;
-
+left: 1208px;
+top: 800px;
 background: #C1DBFF;
 border: 2px solid #05367A;
 border-radius: 8px;
