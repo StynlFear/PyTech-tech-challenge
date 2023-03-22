@@ -1,10 +1,11 @@
 import React from 'react';
 import './Sidebar.css';
 import { FaHome, FaPlus, FaList, FaSignOutAlt } from 'react-icons/fa';
+import { Outlet, Link } from "react-router-dom";
 
 const Sidebar = () => {
   const buttons = [
-    { text: 'Home', icon: <FaHome /> },
+    { text: 'Home', icon: <FaHome />  }, 
     { text: 'Create Form', icon: <FaPlus /> },
     { text: 'Forms', icon: <FaList /> },
     { text: 'Logout', icon: <FaSignOutAlt /> },
