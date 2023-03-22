@@ -28,3 +28,10 @@
     opacity: 0.5;
     pointer-events: none;
   }
+  .forms-container {
+width: 971px;
+height: 163px;
+margin-top: 20px;
+background: #A4CAFF;
+border-radius: 20px;
+  }

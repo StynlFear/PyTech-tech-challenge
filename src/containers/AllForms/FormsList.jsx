@@ -7,9 +7,8 @@ const FormsList = () => {
   const [forms, setForms] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [pageNumber, setPageNumber] = useState(0);
-  const formsPerPage = 1;
+  const formsPerPage = 2;
   const pagesVisited = pageNumber * formsPerPage;
-
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get('https://api-user-forms.herokuapp.com/v1/forms/');
@@ -32,49 +31,56 @@ const FormsList = () => {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
-
   return (
     <div className="forms-list">
-      <h1>Forms List</h1>
-      <input
-        type="text"
-        placeholder="Search forms by name"
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-      {filteredForms.slice(pagesVisited, pagesVisited + formsPerPage).map((form) => (
-        <div key={form._id} className="form">
-          <h2>{form.title}</h2>
-          {form.dynamic_fields.map((field) => (
-            <div key={field._id}>
-              <p>{field.dynamic_field_name}</p>
-              <p>{field.label}</p>
-              <p>{field.placeholder}</p>
-              <p>{field.mandatory ? "Required" : "Optional"}</p>
-              <p>{field.keywords.join(", ")}</p>
-              <p>{field.field_type[0].name}</p>
-              <ul>
-                {field.field_type[0].options.map((option) => (
-                  <li key={option}>{option}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <br />
-        </div>
-      ))}
+     <h1>Forms List</h1>
+<input
+  type="text"
+  placeholder="Search forms by name"
+  value={searchTerm}
+  onChange={handleSearch}
+/>
+{filteredForms.slice(pagesVisited, pagesVisited + formsPerPage).map((form) => (
+  <div class="forms-container" >
+  <div key={form._id} className="form">
+    <h2>{form.title}</h2>
+    <h2>Created on {new Date(form.retention_date).toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric'
+}).replace(/\//g, '.')}</h2>
+    {form.sections.map((section) => (
+      <div key={section._id}>
+
+        {section.dynamic_fields.map((field) => (
+          <div key={field._id}>
+             {field.field_type.options.map((option) => (
+              <div key={option}> </div>
+              ))}
+            
+          </div>
+        ))}
+      </div>
+    ))}
+    <br />
+  </div>
+  </div>
+))}
       <ReactPaginate
-        previousLabel={'Previous'}
-        nextLabel={'Next'}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={'pagination'}
-        previousLinkClassName={'previous-page'}
-        nextLinkClassName={'next-page'}
-        disabledClassName={'disabled'}
-        activeClassName={'active'}
-        style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' ,color : '#000000' }}
-      />
+  previousLabel={'Previous'}
+  nextLabel={'Next'}
+  pageCount={pageCount}
+  onPageChange={changePage}
+  containerClassName={'pagination'}
+  previousLinkClassName={'previous-page'}
+  nextLinkClassName={'next-page'}
+  disabledClassName={'disabled'}
+  activeClassName={'active'}
+  pageRangeDisplayed={7}
+  marginPagesDisplayed={1}
+  breakLabel={'...'}
+  breakClassName={'break'}
+/>
     </div>
   );
 };
