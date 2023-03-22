@@ -8,65 +8,65 @@ import "./RegisterCompany.css";
 export const RegisterCompPage = () => {
   const [userReg, setUserReg] = useState([{}]);
   const [errors, setErrors] = useState({});
-const [isSubmitting, setIsSubmitting] = useState(false);
-let handleClick = (e) => {
-  e.preventDefault();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  let handleClick = (e) => {
+    e.preventDefault();
 
-  // validate form fields
-  const formErrors = {};
-  if (!userReg.fullName) {
-    formErrors.fullName = "Full name is required";
-  }
-  if (!userReg.password) {
-    formErrors.password = "Password is required";
-  }
-  if (!userReg.email) {
-    formErrors.email = "Email is required";
-  } else if (!/\S+@\S+\.\S+/.test(userReg.email)) {
-    formErrors.email = "Invalid email address";
-  }
-  if (!userReg.fullAdress) {
-    formErrors.fullAdress = "Address is required";
-  }
-  if (!userReg.fiscalCode) {
-    formErrors.fiscalCode = "Fiscal code is required";
-  }
+    // validate form fields
+    const formErrors = {};
+    if (!userReg.fullName) {
+      formErrors.fullName = "Full name is required";
+    }
+    if (!userReg.password) {
+      formErrors.password = "Password is required";
+    }
+    if (!userReg.email) {
+      formErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(userReg.email)) {
+      formErrors.email = "Invalid email address";
+    }
+    if (!userReg.fullAdress) {
+      formErrors.fullAdress = "Address is required";
+    }
+    if (!userReg.fiscalCode) {
+      formErrors.fiscalCode = "Fiscal code is required";
+    }
 
-  // set errors and mark form as submitted
-  setErrors(formErrors);
-  setIsSubmitting(true);
+    // set errors and mark form as submitted
+    setErrors(formErrors);
+    setIsSubmitting(true);
 
-  // make API call if there are no errors
-  if (Object.keys(formErrors).length === 0) {
-    axios
-      .post("/v1/users/", {
-        name: userReg.fullName,
-        password: userReg.password,
-        email: userReg.email,
-        address: userReg.fullAdress,
-        fiscal_code: userReg.fiscalCode,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-};
+    // make API call if there are no errors
+    if (Object.keys(formErrors).length === 0) {
+      axios
+        .post("/v1/users/", {
+          name: userReg.fullName,
+          password: userReg.password,
+          email: userReg.email,
+          address: userReg.fullAdress,
+          fiscal_code: userReg.fiscalCode,
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  };
 
-const handleChange = (e) => {
-  const id = e.target.id;
-  const value = e.target.value;
+  const handleChange = (e) => {
+    const id = e.target.id;
+    const value = e.target.value;
 
-  setUserReg({ ...userReg, [id]: value });
+    setUserReg({ ...userReg, [id]: value });
 
-  // clear error for this field
-  setErrors((errors) => ({ ...errors, [id]: undefined }));
-};
+    // clear error for this field
+    setErrors((errors) => ({ ...errors, [id]: undefined }));
+  };
   return (
     <div className="background">
-        <img src="./src/images/background.jpg" alt="" className="log-back-img5" />
+      <img src="./src/images/background.jpg" alt="" className="log-back-img5" />
       <div className="fm-bg">
         <div class="txt-1">
           <p class="t1-rcomp">Sign up as a Company</p>
@@ -82,28 +82,35 @@ const handleChange = (e) => {
                   </label>
                   <br />
                   <input
-  id={data.id}
-  type={data.type}
-  placeholder={data.placeholder}
-  onChange={handleChange}
-  // display error message if there is one
-  className={errors[data.id] ? "fm-in error" : "fm-in"}
-/>
-{errors[data.id] && <div className="error-message">{errors[data.id]}</div>}
+                    id={data.id}
+                    type={data.type}
+                    placeholder={data.placeholder}
+                    onChange={handleChange}
+                    // display error message if there is one
+                    className={errors[data.id] ? "fm-in error" : "fm-in"}
+                  />
+                  {errors[data.id] && (
+                    <div className="error-message">{errors[data.id]}</div>
+                  )}
                 </div>
               );
             })}
           <router>
-              <div> <button
+            <div>
+              {" "}
+              <button
                 className="btn-2"
                 type="submit"
                 onClick={(e) => handleClick(e)}
               >
-                <h1><div className="btn-t-rcomp">  <Link to="/Login">
-          Create account</Link></div> </h1>
-
-          
-              </button></div>
+                <h1>
+                  <div className="btn-t-rcomp">
+                    {" "}
+                    <Link to="/Login">Create account</Link>
+                  </div>{" "}
+                </h1>
+              </button>
+            </div>
           </router>
         </form>
       </div>

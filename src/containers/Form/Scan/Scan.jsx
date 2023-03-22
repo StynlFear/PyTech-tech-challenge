@@ -6,10 +6,10 @@ function Scanner() {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const analyzeDocument = async () => {
-    const endpoint = " https://pytechscannerstynlfear.cognitiveservices.azure.com/";
+    const endpoint = "https://eastus.api.cognitive.microsoft.com/";
     const credential = new AzureKeyCredential("1ef757a844874e3f812161e6cd433a9f");    
     const client = new DocumentAnalysisClient(endpoint, credential);
-    const modelId = "id-2";
+    const modelId = "Pytech-ID";
 
     try {
       const poller = await client.beginAnalyzeDocument(
