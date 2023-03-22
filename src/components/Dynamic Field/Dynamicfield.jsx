@@ -37,7 +37,11 @@ export const Field = () => {
 
   let handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formValues);
+    const formData = formValues.map(field => {
+      const { DynamicField, Label, PlaceHolder, FieldType, Mandatory, Options, DocumentKeywords } = field;
+      return { DynamicField, Label, PlaceHolder, FieldType, Mandatory, Options, DocumentKeywords };
+    });
+    console.log(formData);
   };
   return (
     <div>
@@ -110,6 +114,7 @@ export const Field = () => {
             Import Field
           </button>
         </div>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

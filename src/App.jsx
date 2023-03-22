@@ -10,16 +10,19 @@ import { Startup } from "./components/start up/startup.jsx";
 import CForm from "./containers/Create Form/CreateForm.jsx";
 import GenerateQRCode from "./containers/GenerateQr/GenerateQr.jsx";
 import FormList from "./containers/AllForms/FormsList.jsx";
-import Delsecpop from "./components/delete_section/delsecpop.jsx";
+import { Pageuser } from "./components/page user/pageuser.jsx";
+import Cerere from "./containers/Form/Cerere.jsx";
 import "./App.css";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/t" element={<CForm/>} />
+          <Route exact path="/" element={<Cerere/>} />
           <Route path="Login" element={<LoginPage />} />
+          <Route path="Forms" element={<FormList />} />
           <Route path="RegisterInd" element={<RegisterIndPage />} />
+          <Route path="CreateForm" element={<CForm />} />
           <Route path="RegisterComp" element={<RegisterCompPage />} />
           <Route path="RegisterPub" element={<RegisterPubPage />} />
           <Route path="Type" element={<PageType />} />
@@ -28,6 +31,7 @@ function App() {
           <Route path="/test" element={<Startup />} />
           <Route path="/" element={<GenerateQRCode/>}/>
           <Route path="/pop" element={<Delsecpop/>}/>
+          <Route path="/home" element={<Pageuser/>}/>
         </Routes>
       </BrowserRouter>
     </div>
