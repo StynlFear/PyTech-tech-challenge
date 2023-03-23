@@ -45,7 +45,7 @@ export const LoginPage = () => {
         if (response.data ) {
           // Redirect to home page if email and password match in database
           window.location.href = "/home";
-        }
+        }  
       } catch (error) {
         console.error(error);
         // TODO: handle error response
@@ -87,7 +87,7 @@ export const LoginPage = () => {
 })}
         </form>
       </div>
-      <div>
+      <div className="btn-la">
         <input type="checkbox" className="login-check"></input>
         <div className="log-remb">Remember me</div>
         <Link to="/Forgot">

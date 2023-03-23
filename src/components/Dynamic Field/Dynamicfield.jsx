@@ -50,12 +50,18 @@ export const Field = () => {
           <div className="form-inline" key={index}>
             <DropdownMenu>
             {index ? (
-              
-              <i
-                  class="fa fa-trash delete"
-                  onClick={() => removeFormFields(index)}
-                />
-            ) : null}
+  <>
+    <i
+      class="fa fa-trash delete"
+      onClick={() => setShowPopup(true)}
+    />
+    {showPopup && (
+      <Delsecpop onClose={() => setShowPopup(false)}>
+        {/* Put your popup content here */}
+      </Delsecpop>
+    )}
+  </>
+) : null}
             <label class="field-txt">Dynamic Field Name </label>
             <br />
             <input
