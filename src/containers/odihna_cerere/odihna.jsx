@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./odihna.css"
+import OdihnaEditor from "./Odihna-Editor";
 export default function Odihna() {
 
   return (
@@ -34,6 +35,7 @@ export default function Odihna() {
                 <br />
                 <button className="Sub-od">Submit</button>
             </form>
+            <OdihnaEditor/>
             <div className="od-cont2"></div>
         </div>
         </div>

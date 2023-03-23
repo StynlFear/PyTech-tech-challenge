@@ -39,6 +39,7 @@ function App() {
           <Route path="/" element={<Startup />} />
           <Route path="/qr" element={<GenerateQRCode/>}/>
           <Route path="/home" element={<Pageuser/>}/>
+          <Route path="/cerere" element={<Cerere/>}/>
           <Route   path="/generate" element={<Generate/>} />
           <Route  path="/addforms" element={<Addform/>} />
         </Routes>
