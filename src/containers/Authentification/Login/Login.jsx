@@ -44,7 +44,7 @@ export const LoginPage = () => {
         
         if (response.data ) {
           // Redirect to home page if email and password match in database
-          window.location.href = "/login";
+          window.location.href = "/home";
         }
       } catch (error) {
         console.error(error);

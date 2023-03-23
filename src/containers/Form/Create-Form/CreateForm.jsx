@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import TextFileUploader from './File Uploader';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -9,6 +10,8 @@ const TextEditor = () => {
   const [name, setName] = useState('');
   const [content, setContent] = useState('');
   const [updatedContent,setUpdate] = useState("");
+  const [fileData, setFileData] = useState(null);
+
   const handleEditorChange = (content, editor,updatedContent) => {
     updatedContent = content.replace('{name}', name);
     updatedContent = updatedContent.replace(/<\/?[^>]+(>|$)/g, "");
@@ -23,6 +26,10 @@ const TextEditor = () => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
+
+  const handleDataFromChild = ( data ) =>{
+    setFileData(data);
+  }
 
   const generatePdf = () => {
     const docDefinition = {
@@ -51,7 +58,12 @@ const TextEditor = () => {
       <input type="text" value={name} onChange={handleNameChange} />
 
       <Editor
-        initialValue="<p>Type your text here</p>"
+        initialValue={`Subsemnatul................angajat al................in functia de..............., solicit efectuarea unui numar de .............. zile de concediu de odihna in perioada ............. -
+        ...............
+        <br>Mentionez ca am facut pregatirile necesare pentru continuarea corespunzatoare a activitatii in
+        lipsa mea.
+        
+        <br><br><br><br><br><br><br>Data................`}
         apiKey="YOUR_API_KEY"
         init={{
           height: 500,
@@ -69,6 +81,7 @@ const TextEditor = () => {
         onEditorChange={handleEditorChange}
       />
       <button onClick={generatePdf}>Submit</button>
+      <TextFileUploader setFileData = {handleDataFromChild} />
     </div>
   );
 };

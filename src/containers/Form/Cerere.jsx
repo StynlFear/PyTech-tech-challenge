@@ -46,55 +46,7 @@ function Cerere() {
 
   return (
     <div>
-      <div>
-        {/* Render a list of forms with buttons to select each form */}
-        {formData.map((form) => (
-          <button key={form._id} onClick={() => handleSelectForm(form._id)}>
-            {form.title}
-          </button>
-        ))}
-      </div>
-      {selectedForm && (
-        <div>
-          <h2>{selectedForm.title}</h2>
-          {selectedForm.sections.map((section) => (
-            <div key={section._id}>
-              <h3>{section.title}</h3>
-              <form onSubmit={handleSubmit}>
-                {/* Render the dynamic fields for the selected section */}
-                {section.dynamic_fields.map((field) => (
-                  <div key={field._id}>
-                    <label htmlFor={field.dynamic_field_name}>{field.label}</label>
-                    <br />
-                    {field.field_type.name === "select" ? (
-                      <select
-                        name={field.dynamic_field_name}
-                        required={field.mandatory}
-                      >
-                        <option value="">Select an option</option>
-                        {field.field_type.options.map((option) => (
-                          <option key={option} value={option}>
-                            {option}
-                          </option>
-                        ))}
-                      </select>
-                    ) : (
-                      <input
-                        type={field.field_type.name}
-                        name={field.dynamic_field_name}
-                        placeholder={field.placeholder}
-                        required={field.mandatory}
-                      />
-                    )}
-                    <br />
-                  </div>
-                ))}
-                <button type="submit">Submit</button>
-              </form>
-            </div>
-          ))}
-        </div>
-      )}
+      
       <Scanner />
       <TextEditor/>
     </div>

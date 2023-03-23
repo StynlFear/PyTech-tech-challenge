@@ -15,6 +15,7 @@ import Cerere from "./containers/Form/Cerere.jsx";
 import Generate from "./containers/generateurl/generate.jsx";
 import Addform from "./containers/ADD FORM/addform.jsx";
 import "./App.css";
+import Scanner from "./containers/Form/Scan/Scan.jsx";
 function App() {
   return (
     <div className="App">

@@ -11,7 +11,7 @@ const Generate = () => {
     <div >
         <div className='g-color-back'></div>
         <Sidebar/>
-        <div className="g-tit1">Genereate form URL</div>
+        <div className="g-tit1">Generate form URL</div>
         <div className="g-tit2">Direct URL of your form</div>
         <div className="g-tit3">Your form is securely published and ready to use at this address.</div>
         <div className="g-tit4">Link to share</div>

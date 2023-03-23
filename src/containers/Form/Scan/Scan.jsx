@@ -6,7 +6,7 @@ function Scanner() {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const analyzeDocument = async () => {
-    const endpoint = "https://eastus.api.cognitive.microsoft.com/";
+    const endpoint = "https://pytechscannerstynlfear.cognitiveservices.azure.com/";
     const credential = new AzureKeyCredential("1ef757a844874e3f812161e6cd433a9f");    
     const client = new DocumentAnalysisClient(endpoint, credential);
     const modelId = "Pytech-ID";
@@ -44,7 +44,7 @@ function Scanner() {
           <h3>Extracted document:</h3>
           <p>Document type: {result.docType}</p>
           <p>Confidence: {result.confidence || "<undefined>"}</p>
-          <h3>Fields:</h3>
+          <h3>Fields: {result.Nume}</h3>
           <ul>
             {Object.keys(result.fields).map((fieldName) => (
               <li key={fieldName}>
