@@ -2,18 +2,27 @@ import React, { useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
-import TextFileUploader from './File Uploader';
-
+import "./odihna.css"
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-const TextEditor = () => {
+const OdihnaEditor = () => {
   const [name, setName] = useState('');
+  const [firma, setFirma] = useState('');
+  const [functie, setFunctie] = useState('');
+  const [numzile, setNrzile] = useState('');
+  const [perioada, setPerioada] = useState('');
+  const [date, setDate] = useState('');
   const [content, setContent] = useState('');
   const [updatedContent,setUpdate] = useState("");
   const [fileData, setFileData] = useState(null);
 
   const handleEditorChange = (content, editor,updatedContent) => {
-    updatedContent = content.replace('{name}', name);
+    updatedContent = content.replace('{nume}', name);
+    updatedContent = updatedContent.replace('{firma}', firma);
+    updatedContent = updatedContent.replace('{functie}', functie);
+    updatedContent = updatedContent.replace('{numzile}', numzile);
+    updatedContent = updatedContent.replace('{perioada}', perioada);
+    updatedContent = updatedContent.replace('{date}', date);
     updatedContent = updatedContent.replace(/<\/?[^>]+(>|$)/g, "");
     updatedContent = updatedContent.replace(/&nbsp;/g, " ");
     updatedContent = updatedContent.replace(/&hellip;/g, "...");
@@ -26,10 +35,22 @@ const TextEditor = () => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
-
-  const handleDataFromChild = ( data ) =>{
-    setFileData(data);
-  }
+  const handleFirmaChange = (event) => {
+    setFirma(event.target.value);
+  };
+  const handlefunctieChange = (event) => {
+    setFunctie(event.target.value);
+  };
+  const handlenrzileChange = (event) => {
+    setNrzile(event.target.value);
+  };
+  const handleperioadaChange = (event) => {
+    setPerioada(event.target.value);
+  };
+  const handledateChange = (event) => {
+    setDate(event.target.value);
+  };
+  
 
   const generatePdf = () => {
     const docDefinition = {
@@ -50,13 +71,29 @@ const TextEditor = () => {
       }
     };
     
-    pdfMake.createPdf(docDefinition).download('updated_content.pdf');
+    pdfMake.createPdf(docDefinition).download('cerere_concediu_odihna.pdf');
   };
 
   return (
-    <div>
-      <input type="text" value={name} onChange={handleNameChange} />
-
+    <div><div>
+        <label className="labels-od1">NUME</label>
+      <input type="text" className='input-od' value={name} onChange={handleNameChange} />
+      <br/>
+      <label className="labels-od1">NUME</label>
+      <input type="text" className='input-od' value={firma} onChange={handleFirmaChange} />
+      <br/>
+      <label className="labels-od1">NUME</label>
+      <input type="text" className='input-od' value={functie} onChange={handlefunctieChange} />
+      <br/>
+      <label className="labels-od1">NUME</label>
+      <input type="text" className='input-od' value={numzile} onChange={handlenrzileChange} />
+      <br/>
+      <label className="labels-od1">NUME</label>
+      <input type="text" className='input-od' value={perioada} onChange={handleperioadaChange} />
+      <br/>
+      <label className="labels-od1">NUME</label>
+      <input type="text" className='input-od' value={date} onChange={handledateChange} />
+      </div>
       <Editor
         initialValue={`Subsemnatul................angajat al................in functia de..............., solicit efectuarea unui numar de .............. zile de concediu de odihna in perioada ............. -
         ...............
@@ -85,4 +122,4 @@ const TextEditor = () => {
   );
 };
 
-export default TextEditor;
+export default OdihnaEditor;
