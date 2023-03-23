@@ -405,4 +405,10 @@ color: #FFFFFF;
   color: #FFFFFF;
 
 }
-
+.log-form--error {
+  position: absolute;
+  left: 150px;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
