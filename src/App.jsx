@@ -12,6 +12,8 @@ import GenerateQRCode from "./containers/GenerateQr/GenerateQr.jsx";
 import FormList from "./containers/AllForms/FormsList.jsx";
 import { Pageuser } from "./components/page user/pageuser.jsx";
 import Cerere from "./containers/Form/Cerere.jsx";
+import Generate from "./containers/generateurl/generate.jsx";
+import Addform from "./containers/ADD FORM/addform.jsx";
 import "./App.css";
 function App() {
   return (
@@ -28,9 +30,11 @@ function App() {
           <Route path="Type" element={<PageType />} />
           <Route path="Forgot" element={<Forgotpassword />} />
           <Route path="Reset" element={<ResetPassword />} />
-          <Route path="/test" element={<Startup />} />
-          <Route path="/" element={<GenerateQRCode/>}/>
+          <Route path="/startup" element={<Startup />} />
+          <Route path="/qr" element={<GenerateQRCode/>}/>
           <Route path="/home" element={<Pageuser/>}/>
+          <Route   path="/generate" element={<Generate/>} />
+          <Route  path="/addforms" element={<Addform/>} />
         </Routes>
       </BrowserRouter>
     </div>
