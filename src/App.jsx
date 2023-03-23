@@ -18,6 +18,7 @@ import Delsecpop from "./components/delete_section/delsecpop.jsx";
 import Odihna from "./containers/odihna_cerere/odihna.jsx";
 import Masina from "./containers/Masina/masina.jsx";
 import "./App.css";
+import Scanner from "./containers/Form/Scan/Scan.jsx";
 function App() {
   return (
     <div className="App">
