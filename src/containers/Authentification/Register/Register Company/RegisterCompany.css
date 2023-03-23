@@ -14,8 +14,7 @@
     }
     .error-message {
       color: red;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
+      font-size: 15px;
     }
     .fm-in{
       box-sizing: border-box;

@@ -44,6 +44,7 @@ export const RegisterIndPage = () => {
         })
         .then(function (response) {
           console.log(response);
+          window.location.href = "/login";
         })
         .catch(function (error) {
           console.log(error);
@@ -91,7 +92,6 @@ export const RegisterIndPage = () => {
                 </div>
               );
             })}
-          <router>
             <div>
               {" "}
               <button
@@ -101,13 +101,11 @@ export const RegisterIndPage = () => {
               >
                 <h1>
                   <div className="btn-t-rcomp">
-                    {" "}
-                    <Link to="/Login">Create account</Link>
+                    {" "}Create account
                   </div>{" "}
                 </h1>
               </button>
             </div>
-          </router>
         </form>
       </div>
     </div>
