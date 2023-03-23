@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Scanner from "./Scan/Scan";
+import TextEditor from "./Create-Form/CreateForm";
 
 function Cerere() {
   const [formData, setFormData] = useState([]);
@@ -95,6 +96,7 @@ function Cerere() {
         </div>
       )}
       <Scanner />
+      <TextEditor/>
     </div>
   );
 }
