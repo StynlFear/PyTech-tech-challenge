@@ -14,13 +14,18 @@ import { Pageuser } from "./components/page user/pageuser.jsx";
 import Cerere from "./containers/Form/Cerere.jsx";
 import Generate from "./containers/generateurl/generate.jsx";
 import Addform from "./containers/ADD FORM/addform.jsx";
+import Delsecpop from "./components/delete_section/delsecpop.jsx";
+import Odihna from "./containers/odihna_cerere/odihna.jsx";
+import Masina from "./containers/Masina/masina.jsx";
 import "./App.css";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Cerere/>} />
+          <Route exact path="/del" element={<Delsecpop/>} />
+          <Route exact path="/masina" element={<Masina/>} />
+          <Route exact path="/odihna" element={<Odihna/>} />
           <Route path="Login" element={<LoginPage />} />
           <Route path="Forms" element={<FormList />} />
           <Route path="RegisterInd" element={<RegisterIndPage />} />
@@ -30,7 +35,7 @@ function App() {
           <Route path="Type" element={<PageType />} />
           <Route path="Forgot" element={<Forgotpassword />} />
           <Route path="Reset" element={<ResetPassword />} />
-          <Route path="/startup" element={<Startup />} />
+          <Route path="/" element={<Startup />} />
           <Route path="/qr" element={<GenerateQRCode/>}/>
           <Route path="/home" element={<Pageuser/>}/>
           <Route   path="/generate" element={<Generate/>} />

@@ -1,4 +1,14 @@
-
+.btn-la{
+  position: absolute;
+  left: 230px;
+  top: 100px;
+  width: 100px;
+}
+.mesaj-x{
+  position: absolute;
+  text-align: center;
+  size: 100px;
+}
 /* HTML5 display-role reset for older browsers */
 
  HEAD
@@ -284,7 +294,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 /* identical to box height, or 150% */
-
+width: 500px;
 display: flex;
 align-items: center;
 
@@ -357,7 +367,8 @@ color: #fff;
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
-line-height: 24px
+line-height: 24px;
+width: 100px;
 
 }
 .login-txt1{
