@@ -11,7 +11,7 @@ export const Field = () => {
   const [formValues, setFormValues] = useState([
     { DynamicField: "", Label: "", PlaceHolder: "" },
   ]);
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
   const [optionValue, setOptionValue] = useState("");
   const handleSelect = (e) => {
     console.log(e.target.value);
@@ -21,9 +21,6 @@ export const Field = () => {
     let newFormValues = [...formValues];
     newFormValues[i][e.target.name] = e.target.value;
     setFormValues(newFormValues);
-  };
-  const handleButtonClick = () => {
-    setShowPopup(true);
   };
   let addFormFields = () => {
     setFormValues([
@@ -35,6 +32,7 @@ export const Field = () => {
     setShowPopup(false);
   };
   let removeFormFields = (i) => {
+    setShowPopup(true);
     event.preventDefault();
     let newFormValues = [...formValues];
     newFormValues.splice(i, 1);
@@ -57,10 +55,18 @@ export const Field = () => {
             <DropdownMenu>
             {index ? (
   <>
-    <i
-      class="fa fa-trash delete"
-      onClick={removeFormFields}
+  <i
+  class="fa fa-trash delete "
+  onClick={removeFormFields}
     />
+    {showPopup && (
+        <div className="popup-container">
+          <div className="popup-overlay" onClick={removeFormFields} />
+          <div className="popup-content">
+            <Deldyn onClose={removeFormFields} />
+          </div>
+        </div>
+      )}
    
   </>
 ) : null}

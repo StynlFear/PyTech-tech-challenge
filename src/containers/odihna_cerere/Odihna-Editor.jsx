@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { Outlet, Link } from "react-router-dom";
 import "./odihna.css"
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -73,7 +74,6 @@ const OdihnaEditor = () => {
     };
     
     pdfMake.createPdf(docDefinition).download('cerere_concediu_odihna.pdf');
-    window.location.href = "/generate";
   };
 
   return (
@@ -124,8 +124,10 @@ const OdihnaEditor = () => {
         onEditorChange={handleEditorChange}
       />
       </div>
-
+        <router> <Link to="/generate">
       <button onClick={generatePdf} className="Sub-od">Submit</button>
+      </Link>
+      </router>
     </div>
   );
 };

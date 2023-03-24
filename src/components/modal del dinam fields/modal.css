@@ -30,7 +30,7 @@ body.active-modal {
  
     line-height: 1.4;
     top:35%;
-    left: 45%;
+    left: 40%;
     background: rgba(255,218,218,255);
     padding: 14px 28px;
     border-radius: 15px;
@@ -89,6 +89,20 @@ text-align: center;
 
 color: #720000;
 
+}
+.delete-2{
+    position: relative;
+  color: #05367a;
+  top: -88px;
+  left: 673px;
+  scale: 150%;
+}
+.img-url{
+    position: absolute;
+    left: 120px;
+}.img-url-2{
+    position: absolute;
+    left: 120px;
 }
 .delete-dynamic-field{
 
@@ -244,8 +258,8 @@ color: #002372;
     
  
     line-height: 1.4;
-    top:5%;
-    left: 27%;
+    top:10%;
+    left: 30%;
     background: rgba(164,205,255,255);
     padding: 14px 28px;
     border-radius: 15px;

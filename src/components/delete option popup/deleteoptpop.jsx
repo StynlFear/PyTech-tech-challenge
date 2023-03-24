@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../modal del dinam fields/modal.css"
 export default function Deloppop() {
   const [modal, setModal] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Deloppop() {
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content1  ">
-            <img  src="./src/images/popup.png" alt="idk" width="400px" />
+            <img className="img-url"  src="./src/images/popup.png" alt="idk" width="400px" />
             <div className="message1_delop">Delete option?</div>
             <div className="message2">You’ll permanently lose your option "name of field" from your list. </div>
             <button className="close-modal" onClick={toggleModal}>Cancel</button>
@@ -31,7 +31,6 @@ export default function Deloppop() {
           </div>
         </div>
       )}
-      <p>Lorem </p>
     </>
   );
 }
