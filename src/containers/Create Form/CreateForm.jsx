@@ -7,6 +7,8 @@ import "./CreateForm.css";
 import { Sections } from "../../components/Sections/SectionsField.jsx";
 import { Data } from "../../components/DataRetention/DataRetentionPeriod.jsx";
 import Sidebar from "../../components/sidebar/Sidebar.jsx";
+import { Outlet, Link } from "react-router-dom";
+
 /// DATA IMPORT
 
 export const CForm = () => {
@@ -36,9 +38,9 @@ export const CForm = () => {
           <h1 class="section-header"> Data Retention Period</h1>
           <Data/>
           <hr  class="section-divider"/>
-          <button className="button-submit" type="submit">
-            Submit
-          </button>
+          <router>
+            <Link to="/Odihna"><button className="button-submit" type="submit">Submit</button></Link>
+          </router>
         </div>
       </div>
     </div>

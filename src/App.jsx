@@ -37,7 +37,6 @@ function App() {
           <Route path="Type" element={<PageType />} />
           <Route path="Forgot" element={<Forgotpassword />} />
           <Route path="Reset" element={<ResetPassword />} />
-          <Route path="/" element={<Startup />} />
           <Route path="/qr" element={<GenerateQRCode/>}/>
           <Route path="/home" element={<Pageuser/>}/>
           <Route path="/cerere" element={<Cerere/>}/>

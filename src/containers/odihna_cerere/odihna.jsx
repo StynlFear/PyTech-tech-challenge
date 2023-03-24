@@ -15,25 +15,8 @@ export default function Odihna() {
             <div className="od-cont-t1">Section 1</div>
             <hr className="od-bara"/>
             <form action="">
-                <label className="labels-od1">NUME</label>
-                <input type="text" className="input-od"/>
-                <br />
-                <label className="labels-od1">FIRMA</label>
-                <input type="text" className="input-od"/>
-                <br />
-                <label className="labels-od1">FUNCTIE</label>
-                <input type="text" className="input-od"/>
-                <br />
-                <label className="labels-od1">NUMAR DE ZILE</label>
-                <input type="text" className="input-od"/>
-                <br />
-                <label className="labels-od1">PERIOADA</label>
-                <input type="text" className="input-od"/>
-                <br />
-                <label className="labels-od1">DATA</label>
-                <input type="text" className="input-od"/>
-                <br />
-                <button className="Sub-od">Submit</button>
+                
+                
             </form>
             <OdihnaEditor/>
             <div className="od-cont2"></div>

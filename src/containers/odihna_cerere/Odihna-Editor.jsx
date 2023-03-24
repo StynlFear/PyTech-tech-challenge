@@ -55,56 +55,62 @@ const OdihnaEditor = () => {
   const generatePdf = () => {
     const docDefinition = {
       content: [
-        { text: 'Updated Content:', style: 'header' },
+        { text: 'Cerere concediu de odihna', style: 'header' },
         { text: updatedContent, style: 'content' }
       ],
       styles: {
         header: {
-          fontSize: 18,
+          fontSize: 22,
           bold: true,
-          margin: [20, 0, 0, 10]
+          margin: [120, 0, 0, 10]
         },
         content: {
           fontSize: 12,
           margin: [0, 0, 0, 10]
         }
       }
+     
     };
     
     pdfMake.createPdf(docDefinition).download('cerere_concediu_odihna.pdf');
+    window.location.href = "/generate";
   };
 
   return (
-    <div><div>
+    <div>
+      <div className='od-inp23'>
         <label className="labels-od1">NUME</label>
       <input type="text" className='input-od' value={name} onChange={handleNameChange} />
       <br/>
-      <label className="labels-od1">NUME</label>
+      <label className="labels-od1">FIRMA</label>
       <input type="text" className='input-od' value={firma} onChange={handleFirmaChange} />
       <br/>
-      <label className="labels-od1">NUME</label>
+      <label className="labels-od1">FUNCTIE</label>
       <input type="text" className='input-od' value={functie} onChange={handlefunctieChange} />
       <br/>
-      <label className="labels-od1">NUME</label>
+      <label className="labels-od1">NR ZILE</label>
       <input type="text" className='input-od' value={numzile} onChange={handlenrzileChange} />
       <br/>
-      <label className="labels-od1">NUME</label>
+      <label className="labels-od1">PERIOADA</label>
       <input type="text" className='input-od' value={perioada} onChange={handleperioadaChange} />
       <br/>
-      <label className="labels-od1">NUME</label>
+      <label className="labels-od1">DATA</label>
       <input type="text" className='input-od' value={date} onChange={handledateChange} />
       </div>
+      <div className='text-side-od'>
       <Editor
-        initialValue={`Subsemnatul................angajat al................in functia de..............., solicit efectuarea unui numar de .............. zile de concediu de odihna in perioada ............. -
-        ...............
+        initialValue={`Subsemnatul {nume} angajat al {firma} in functia de {functie}, solicit efectuarea unui numar de {numzile} zile de concediu de odihna in perioada {perioada} -
+        
         <br>Mentionez ca am facut pregatirile necesare pentru continuarea corespunzatoare a activitatii in
         lipsa mea.
-        
-        <br><br><br><br><br><br><br>Data................`}
+       
+        <br><br><br><br><br><br><br>Data {date}`}
         apiKey="YOUR_API_KEY"
         init={{
           height: 500,
+          width:600,
           menubar: false,
+          statusbar: false,
           plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'searchreplace visualblocks code fullscreen',
@@ -117,7 +123,9 @@ const OdihnaEditor = () => {
         }}
         onEditorChange={handleEditorChange}
       />
-      <button onClick={generatePdf}>Submit</button>
+      </div>
+
+      <button onClick={generatePdf} className="Sub-od">Submit</button>
     </div>
   );
 };
