@@ -24,9 +24,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/del" element={<Delsecpop/>} />
-          <Route exact path="/masina" element={<Masina/>} />
-          <Route exact path="/odihna" element={<Odihna/>} />
+        <Route exact path="/" element={<Startup />} />
+          <Route  path="/del" element={<Delsecpop/>} />
+          <Route path="/masina" element={<Masina/>} />
+          <Route  path="/odihna" element={<Odihna/>} />
           <Route path="Login" element={<LoginPage />} />
           <Route path="Forms" element={<FormList />} />
           <Route path="RegisterInd" element={<RegisterIndPage />} />
@@ -36,7 +37,6 @@ function App() {
           <Route path="Type" element={<PageType />} />
           <Route path="Forgot" element={<Forgotpassword />} />
           <Route path="Reset" element={<ResetPassword />} />
-          <Route path="/" element={<Startup />} />
           <Route path="/qr" element={<GenerateQRCode/>}/>
           <Route path="/home" element={<Pageuser/>}/>
           <Route path="/cerere" element={<Cerere/>}/>

@@ -2,7 +2,7 @@
     position: absolute;
 width: 670px;
 height: 1031px;
-left: 540px;
+left: 270px;
 top: 257px;
 
 background: #BFDBFD;
@@ -89,7 +89,7 @@ background: #BFDBFD;
     position: absolute;
 width: 230px;
 height: 40px;
-left: 540px;
+left: 270px;
 top: 40px;
 
 font-family: 'Roboto';
@@ -112,7 +112,7 @@ color: #002372;
 position: absolute;
 width: 75px;
 height: 56px;
-left: 540px;
+left: 270px;
 top: 101px;
 
 font-family: 'Roboto';
@@ -132,7 +132,7 @@ color: #05367A;
     position: absolute;
 width: 235px;
 height: 32px;
-left: 540px;
+left: 270px;
 top: 172px;
 width: 500px;
 /* Heading/H4 */
