@@ -4,12 +4,14 @@ import { Dropdown, Option } from "../DropDown/DropDown.jsx";
 import { DropdownMenu } from "../DropDownMenu/DropDownMenu.jsx";
 import { Options } from "../Options/Options.jsx";
 import Delsecpop from "../delete_section/delsecpop.jsx";
+import Deldyn from "../modal del dinam fields/modal.jsx";
 // CSS IMPORT
 import "../../containers/Create Form/CreateForm.css";
 export const Field = () => {
   const [formValues, setFormValues] = useState([
     { DynamicField: "", Label: "", PlaceHolder: "" },
   ]);
+  const [showPopup, setShowPopup] = useState(false);
   const [optionValue, setOptionValue] = useState("");
   const handleSelect = (e) => {
     console.log(e.target.value);
@@ -20,14 +22,18 @@ export const Field = () => {
     newFormValues[i][e.target.name] = e.target.value;
     setFormValues(newFormValues);
   };
-
+  const handleButtonClick = () => {
+    setShowPopup(true);
+  };
   let addFormFields = () => {
     setFormValues([
       ...formValues,
       { DynamicField: "", Label: "", PlaceHolder: "" },
     ]);
   };
-
+  const handleModalClose = () => {
+    setShowPopup(false);
+  };
   let removeFormFields = (i) => {
     event.preventDefault();
     let newFormValues = [...formValues];
@@ -53,13 +59,9 @@ export const Field = () => {
   <>
     <i
       class="fa fa-trash delete"
-      onClick={() => setShowPopup(true)}
+      onClick={removeFormFields}
     />
-    {showPopup && (
-      <Delsecpop onClose={() => setShowPopup(false)}>
-        {/* Put your popup content here */}
-      </Delsecpop>
-    )}
+   
   </>
 ) : null}
             <label class="field-txt">Dynamic Field Name </label>
@@ -123,7 +125,6 @@ export const Field = () => {
             Import Field
           </button>
         </div>
-        <button  type="submit">Submit</button>
       </form>
     </div>
   );

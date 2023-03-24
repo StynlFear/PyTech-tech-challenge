@@ -32,7 +32,6 @@ export default function Deldyn() {
           </div>
         </div>
       )}
-      <p>Lorem </p>
     </>
   );
 }
