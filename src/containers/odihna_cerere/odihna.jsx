@@ -6,7 +6,7 @@ export default function Odihna() {
 
   return (
     <div>
-        <div style={{backgroundColor: '#DBEBFF', height: '300vh'}}>
+        <div style={{backgroundColor: '#DBEBFF', height: '150vh'}}>
         <Sidebar/>
         <div className="od-t1">Intelligent Forms</div>
         <div className="od-t2">Form</div>

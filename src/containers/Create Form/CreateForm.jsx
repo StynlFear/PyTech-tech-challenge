@@ -8,7 +8,7 @@ import { Sections } from "../../components/Sections/SectionsField.jsx";
 import { Data } from "../../components/DataRetention/DataRetentionPeriod.jsx";
 import Sidebar from "../../components/sidebar/Sidebar.jsx";
 import { Outlet, Link } from "react-router-dom";
-
+import Generateurl from "../../components/generate_url/generateurl.jsx";
 /// DATA IMPORT
 
 export const CForm = () => {
@@ -39,7 +39,7 @@ export const CForm = () => {
           <Data/>
           <hr  class="section-divider"/>
           <router>
-            <Link to="/Odihna"><button className="button-submit" type="submit">Submit</button></Link>
+            <Link to="/url"><button className="button-submit" type="submit">Submit</button></Link>
           </router>
         </div>
       </div>

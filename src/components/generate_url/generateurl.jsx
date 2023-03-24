@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
+import { Outlet, Link } from "react-router-dom";
+import "../modal del dinam fields/modal.css"
 export default function Generateurl() {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -15,23 +16,26 @@ export default function Generateurl() {
 
   return (
     <>
-      <button onClick={toggleModal} className="btn-modal">
-        Open
-      </button>
-
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content-generate">
-            <img  src="./src/images/generate.png" alt="idk" width="400px" />
+            <img className="img-url"  src="./src/images/generate.png" alt="idk" width="400px" />
            
             <div className="generate-m">You want to generate a URL for this form? </div>
+            <router>
+            <Link to="/CreateForm">
             <button className="close-modal-g" onClick={toggleModal}>Cancel</button>
+            </Link>
+            </router>
+            <router>
+            <Link to="/Odihna">
             <button className="generate-url-b">Generate</button>
+            </Link>
+            </router>
           </div>
         </div>
       )}
-      <p>Lorem </p>
     </>
   );
 }

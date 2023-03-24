@@ -48,6 +48,7 @@ export const Options = () => {
                   class="fa fa-trash delete-options"
                   onClick={() => removeFormFields(index)}
                 />
+                
               ) : null}
               <input
                 class="field-input-opt"

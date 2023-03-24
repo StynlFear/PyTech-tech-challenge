@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Modal.css";
 
 export default function Deldyn() {
   const [modal, setModal] = useState(false);
@@ -16,17 +15,19 @@ export default function Deldyn() {
 
   return (
     <>
-      <button onClick={toggleModal} className="btn-modal">
-        Open
-      </button>
+    <i
+  class="fa fa-trash delete-2 "
+  onClick={toggleModal}
+    />
+
 
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content1">
-            <img  src="./src/images/popup.png" alt="idk" width="400px" />
-            <div className="message1">Delete dynamic field?</div>
-            <div className="message2">You’ll permanently lose your field  "name of field" from your list. </div>
+          <div className="modal-content1  ">
+            <img className="img-url" src="./src/images/popup.png" alt="idk" width="400px" />
+            <div className="message1_delop">Delete option?</div>
+            <div className="message2">You’ll permanently lose your option "name of field" from your list. </div>
             <button className="close-modal" onClick={toggleModal}>Cancel</button>
             <button className="delete-dynamic-field">Delete field</button>
           </div>
