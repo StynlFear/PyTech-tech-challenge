@@ -7,7 +7,7 @@ import { Outlet, Link } from "react-router-dom";
 const Sidebar = () => {
   const buttons = [
     { text: 'Home', icon: <FaHome /> ,link:"/home" }, 
-    { text: 'Create Form', icon: <FaPlus />,link:"/CreateForm" },
+    { text: 'Create Form', icon: <FaPlus />,link:"/AddForms" },
     { text: 'Forms', icon: <FaList />,link:"/Forms" },
     { text: 'Logout', icon: <FaSignOutAlt />,link:"/Login" },
   ];
