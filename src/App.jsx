@@ -17,6 +17,7 @@ import Addform from "./containers/ADD FORM/addform.jsx";
 import Delsecpop from "./components/delete_section/delsecpop.jsx";
 import Odihna from "./containers/odihna_cerere/odihna.jsx";
 import Masina from "./containers/Masina/masina.jsx";
+import Deldyn from "./components/modal del dinam fields/modal.jsx";
 import "./App.css";
 import Scanner from "./containers/Form/Scan/Scan.jsx";
 function App() {
@@ -24,7 +25,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/del" element={<Delsecpop/>} />
+          <Route exact path="/del" element={<Deldyn/>} />
           <Route exact path="/masina" element={<Masina/>} />
           <Route exact path="/odihna" element={<Odihna/>} />
           <Route path="Login" element={<LoginPage />} />

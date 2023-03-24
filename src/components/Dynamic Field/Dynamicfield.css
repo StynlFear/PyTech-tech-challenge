@@ -92,8 +92,8 @@ input[type="checkbox"] {
 }
 .check-dyn{
   position: relative;
-  top: 580px;
-  left: 500px;
+  top: -45px;
+  left: 98px;
 }
 .field-header {
   width: 172px;
@@ -126,11 +126,6 @@ input:focus {
 #btn {
   margin-top: 20px;
   display: inline-flex;
-}
-.inl {
-  position: absolute;
-  left: 100px;
-  bottom: 40px;
 }
 .inp-mand-cf{
   position: absolute;
